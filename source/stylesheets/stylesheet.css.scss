@@ -1,0 +1,184 @@
+$color-darkest: #133c2a;
+$color-dark: #267855;
+$color-medium: #a0dea0;
+$color-light: #d9f2d9;
+$color-lightest: #ecf8ec;
+$color-complement: #996AAB;
+
+
+.menu{
+	color: $color-dark;
+}
+
+body{
+	background-color: $color-medium;
+}
+
+html{
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+header h1{
+	color: $color-darkest;
+	font-size: 1.87em;
+	margin: 0;
+	position: relative;
+	top: 7px;
+}
+
+header h4{
+	color: $color-darkest;
+	font-size: 0.8em;
+	margin: 0.5rem 0 0 1rem;
+}
+
+header{
+	height: 126px;
+}
+
+.menu{
+	display: none;
+}
+
+header h3, header div:nth-child(2){
+	text-align: right;
+	margin: 1rem 1rem 0 0;
+}
+
+.title{
+	border-bottom: 1px solid $color-darkest;
+}
+
+.title div{
+	margin: 0 1em 0 1em;
+}
+
+header li{
+	font-size: 1.17em;
+}
+
+@media (min-width: 569px){
+	header{
+		height: 14rem;
+		padding-top: 1rem;
+	}
+	header h1{
+		font-size: 2.1em;
+		margin-top: 1rem;
+		top: 8px;
+	}
+	header h4 {
+	font-size: 1.17em;
+	}
+}
+
+
+
+
+@media (min-width: 769px){
+	header{
+	height: 22rem;
+	padding-top: 1.5rem;
+	}
+	.toggle{
+	display: none;
+	}
+	.menu{
+	display: initial;
+	}
+	header h1{
+		font-size: 2.5em;
+		margin-top: 2em;
+		top: 10px;
+	}
+	header h4 {
+		margin-left: 5.5%;
+	}
+	.title{
+	border: none;
+	}
+	.title div{
+		margin: 0 5.5% 0 5.5%;
+		border-bottom: 2px solid $color-darkest;
+	}
+	header h3, header div:nth-child(2){
+		margin-right: 5.5%;	
+	}
+
+}
+
+
+
+
+
+
+.levels{
+	padding: 0 1em 0 1em;
+
+}
+
+
+
+
+.levels div div{
+	background-color: $color-lightest;
+	border-radius: 10px;
+	padding-left: 2em;
+	height: 6rem;
+	position: relative;	
+	margin-bottom: 1em;
+}
+
+.levels a{
+	text-decoration: none;
+}
+
+content h2{
+	color: $color-complement;
+	position: absolute;
+	top: 35%;
+}
+
+@media (min-width: 569px){
+	.levels div div{
+		height: 11rem;
+		margin-bottom: 1.5em;
+	}
+
+}
+
+
+
+@media (min-width: 769px){
+	.levels{
+		padding: 0 6% 0 6%;
+	}
+	.levels>div{
+		display: flex;
+		justify-content: space-between;
+	}
+	.levels div div{
+		width: calc(100%/3 - 5%);
+		height: 16rem;
+	}
+}
+
+
+
+
+
+

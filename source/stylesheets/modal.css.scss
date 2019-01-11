@@ -1,0 +1,174 @@
+$color-darkest: #133c2a;
+$color-dark: #267855;
+$color-medium: #a0dea0;
+$color-light: #d9f2d9;
+$color-lightest: #ecf8ec;
+$color-complement: #996AAB;
+
+.modal-button{
+	background: $color-lightest;
+	font-size: 1em;
+	width: calc(100vw - 2rem);
+	margin-bottom: 1em;
+	border-radius: 4px;
+	height: 4rem;
+}
+
+.modal-button h4{
+	color: $color-complement;
+}
+
+.modal {
+	z-index:3;
+	display:none;
+	padding-top:100px;
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,0.8);
+	font-size: 18px;
+	font-family: 'B612 Mono', monospace;
+	color: #000;
+}
+
+.modal-content {
+	margin:auto;
+	background-color:#fff;
+	position:relative;
+	padding:0;
+	outline:0;
+	width:80%;
+	border-radius: 6px;
+	}
+
+@media screen and (min-width: 35.5em){
+	.modal-button{
+		width: calc((100vw - 4rem)/3);
+	}
+}
+
+@media (min-width: 768px){
+	.modal-button{
+		font-size: 1.2em;
+	} 
+	.modal-button{
+		width: calc((100vw - 15.5vw)/3);
+	}
+}
+
+@media screen and (min-width: 80em){
+	.modal-button{
+		width: calc((100vw - 30vw)/3);
+		height: 6rem;
+		font-size: 1.6em;
+	}
+}
+
+
+
+
+
+
+/*Meta data text box*/
+
+.modal aside{
+	display: flex;
+	justify-content: flex-end;
+	width: 95%;
+}
+
+.modal aside div{
+	
+	width: 500px;
+	max-height: 65px;
+	overflow: hidden;
+	}
+
+.modal p{
+	color: 	#D3D3D3;
+}
+
+
+
+
+
+
+
+
+.exterior-table{
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.modal table, .modal td, .modal th{
+	border-collapse: collapse;
+}
+
+.modal table{
+	margin-left: 50px;
+	margin-bottom: 30px;
+	width: 90px;
+}
+
+.modal td, .modal th{
+	text-align: right;
+}
+
+.modal th{
+	/*padding-bottom: 5px;*/
+	color: 	#D3D3D3;
+}
+
+
+.modal tr:last-child{
+	border-bottom: 1px solid black;
+}
+
+
+
+@media print{
+	.modal table{
+		margin-left: 15pt;
+		margin-bottom: 45pt;
+		width: 60pt;
+		font-size: 14pt;
+	}
+	.exterior-table{
+		margin-top: 5pt;
+	}
+	.modal p{
+		font-size: 8pt;
+	}
+	.modal aside{
+		width: 100%;
+	}
+	.modal aside div{
+		height: 36px;
+	}
+	.modal-content{
+		width: 100%
+	}
+	.modal span{
+		display: none;
+	}
+	.modal {
+		padding-top:0px;
+	}
+}
+
+@page{
+	size: landscape;
+	margin-top: 0.2in;
+	margin-bottom: 0;
+	margin-left: calc(0.4in - 15pt);
+	/*margin-right: 0;*/
+	margin-right: 0.4in;
+
+	
+}
+

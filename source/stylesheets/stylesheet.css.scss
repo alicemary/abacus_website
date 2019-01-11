@@ -5,7 +5,9 @@ $color-light: #d9f2d9;
 $color-lightest: #ecf8ec;
 $color-complement: #996AAB;
 
-
+h1, h2, h3, h4, h5, h6, p{
+	color: $color-darkest;
+}
 .menu{
 	color: $color-dark;
 }
@@ -40,6 +42,10 @@ header h1{
 	top: 7px;
 }
 
+header a{
+	text-decoration: none;
+}
+
 header h4{
 	color: $color-darkest;
 	font-size: 0.8em;
@@ -70,6 +76,8 @@ header h3, header div:nth-child(2){
 header li{
 	font-size: 1.17em;
 }
+
+
 
 @media (min-width: 568px){
 	header{
@@ -174,11 +182,13 @@ header li{
 	text-decoration: none;
 }
 
-content h2{
+.levels h2{
 	color: $color-complement;
 	position: absolute;
 	top: 35%;
 }
+
+
 
 @media (min-width: 568px){
 	.levels div div{
@@ -192,12 +202,12 @@ content h2{
 
 @media (min-width: 768px){
 	.levels{
-		padding: 0 6% 0 6%;
+		padding: 0 5.5% 0 5.5%;
 	}
 	.levels div div{
 		height: 11rem; 
 	}
-	content h2{
+	.levels h2{
 		font-size: 1.8em;
 	}
 }
@@ -223,11 +233,10 @@ content h2{
 	.levels div div{
 		height: 33vh;
 	}
-	content h2{
+	.levels h2{
 		font-size: 2.5em;
 	}
 }
-
 
 
 

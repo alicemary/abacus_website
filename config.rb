@@ -6,6 +6,7 @@ activate :autoprefixer do |prefix|
 end
 
 activate :livereload
+activate :bh
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 

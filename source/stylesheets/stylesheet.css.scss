@@ -71,14 +71,14 @@ header li{
 	font-size: 1.17em;
 }
 
-@media (min-width: 569px){
+@media (min-width: 568px){
 	header{
 		height: 14rem;
 		padding-top: 1rem;
 	}
 	header h1{
 		font-size: 2.1em;
-		margin-top: 1rem;
+		margin-top: 1.6rem;
 		top: 8px;
 	}
 	header h4 {
@@ -89,7 +89,7 @@ header li{
 
 
 
-@media (min-width: 769px){
+@media (min-width: 768px){
 	header{
 	height: 22rem;
 	padding-top: 1.5rem;
@@ -102,7 +102,7 @@ header li{
 	}
 	header h1{
 		font-size: 2.5em;
-		margin-top: 2em;
+		margin-top: 5rem;
 		top: 10px;
 	}
 	header h4 {
@@ -121,6 +121,36 @@ header li{
 
 }
 
+@media screen and (min-width: 80em){
+	header h4 {
+		margin-left: 10%;
+		margin-top: 1rem;
+		font-size: 2em;
+	}
+	.title div{
+		margin: 0 10% 0 10%;
+	}
+	header h3, header div:nth-child(2){
+		margin-right: 10%;	
+	}
+	header li{
+	font-size: 2em;
+	}
+	header h1{
+	font-size: 6em;
+	margin-top: 1.5em;
+	top: 24px;
+	}
+	header{
+		height: 37.5rem;
+		padding-top: 2.5em;
+	}
+	.title div{
+		border-bottom: 4px solid $color-darkest;
+	}
+}
+
+
 
 
 
@@ -130,9 +160,6 @@ header li{
 	padding: 0 1em 0 1em;
 
 }
-
-
-
 
 .levels div div{
 	background-color: $color-lightest;
@@ -153,9 +180,9 @@ content h2{
 	top: 35%;
 }
 
-@media (min-width: 569px){
+@media (min-width: 568px){
 	.levels div div{
-		height: 11rem;
+		height: 8rem;
 		margin-bottom: 1.5em;
 	}
 
@@ -163,19 +190,54 @@ content h2{
 
 
 
-@media (min-width: 769px){
+@media (min-width: 768px){
 	.levels{
 		padding: 0 6% 0 6%;
 	}
+	.levels div div{
+		height: 11rem; 
+	}
+	content h2{
+		font-size: 1.8em;
+	}
+}
+
+
+@media screen and (min-width: 64em){
 	.levels>div{
 		display: flex;
 		justify-content: space-between;
 	}
+
 	.levels div div{
 		width: calc(100%/3 - 5%);
 		height: 16rem;
 	}
 }
+
+@media screen and (min-width: 80em){
+
+	.levels{
+		padding: 0 10% 0 10%;
+	}
+	.levels div div{
+		height: 33vh;
+	}
+	content h2{
+		font-size: 2.5em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

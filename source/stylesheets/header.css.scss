@@ -1,0 +1,217 @@
+$color-darkest: #133c2a;
+$color-dark: #267855;
+$color-medium: #a0dea0;
+$color-light: #d9f2d9;
+$color-lightest: #ecf8ec;
+$color-complement: #996AAB;
+
+header{
+	height: 126px;
+}
+
+
+@media (min-width: 568px){
+	header{
+		height: 11rem;
+	}
+}
+
+@media (min-width: 768px){
+	header{
+	height: 15rem;
+	}
+}
+
+@media screen and (min-width: 80em){
+	header{
+			height: 25.8rem;
+			padding-top: 2.5em;
+		}
+
+}
+
+
+
+
+
+/*Header Title*/
+header h1{
+	color: $color-darkest;
+	font-size: 1.7em;
+	margin: 2.8rem 0 0 0;
+	position: relative;
+	top: 7px;
+	right: 2px;
+}
+
+
+header h4{
+	color: $color-darkest;
+	font-size: 0.8em;
+	margin: 0.5rem 0 0 0;
+	font-weight: normal;
+}
+
+
+.title{
+	border-bottom: 1px solid $color-darkest;
+}
+
+
+
+
+
+
+@media (min-width: 568px){
+	header h1{
+		font-size: 2.1em;
+		margin-top: 3.6rem;
+		top: 8px;
+	}
+	header h4 {
+	font-size: 1em;
+	}
+}
+
+
+
+@media (min-width: 768px){
+	header h1{
+		font-size: 2.5em;
+		margin-top: 4.5rem;
+		top: 10px;
+	}
+	.title{
+	border: none;
+	}
+	.title div{
+		border-bottom: 2px solid $color-darkest;
+	}
+}
+
+@media screen and (min-width: 64em){
+	header h4{
+		font-size: 1.2em;
+	}	
+}
+
+@media screen and (min-width: 80em){
+	header h4 {
+		margin-top: 1rem;
+		font-size: 1.5em;
+	}
+
+	header h1{
+	font-size: 5em;
+	margin-top: 8rem;
+	top: 20px;
+	}
+	.title div{
+		border-bottom: 4px solid $color-darkest;
+	}
+}
+
+
+
+
+
+/*menu list*/
+.menu{
+	text-align: right;
+	position: absolute;
+	top: 1rem;
+	width: calc(100vw - 2rem);
+}
+.menu ul{
+	display: flex;
+	list-style-type: none;
+	justify-content: space-between;
+}
+
+header a{
+	text-decoration: none;
+	color: $color-dark;
+}
+
+header a:hover{
+	color: $color-lightest;
+}
+header .link{
+	font-size: 0.8em;
+}
+
+@media (min-width: 568px){
+	.menu ul{
+		justify-content: space-evenly;
+	}
+	header .link{
+		font-size: 1em;
+	}
+}
+
+@media (min-width: 768px){
+	.menu{
+		margin: 0 5.5% 0 0;	
+		text-align: right;
+		width: calc(100vw - 11vw);
+		top: 1.5rem;
+	}
+	.menu ul{
+		width: 50%;
+		float: right;
+		justify-content: space-between;
+	}
+
+}
+
+@media screen and (min-width: 64em){
+	header .link{
+		font-size: 1.2em;
+	}	
+}
+
+@media screen and (min-width: 80em){
+	.menu{
+		margin: 0 10% 0 0;	
+		top: 2rem;
+		width: calc(100vw - 20vw);
+	}
+	header .link{
+		font-size: 1.5em;
+	}
+}
+
+
+
+
+
+/*hamburger menu*/
+.hamburger-menu{
+}
+
+.hamburger{
+	width: 32px;
+	height: 32px;
+	background-color: blue;
+	float: right;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	}
+
+@media (min-width: 768px){
+	.hamburger-menu{
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+

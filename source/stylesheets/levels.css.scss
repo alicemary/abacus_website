@@ -1,22 +1,6 @@
 /*Beginner, Intermediate and Advanced pages use this formatting*/
 
-.worksheets{
-	padding: 0 1rem 0 1rem; 
-}
 
-.worksheets section{
-	margin-bottom: 1rem;
-}
-
-
-
-.worksheets-intro h2{
-	font-size: 1.2em;
-}
-
-.worksheets-intro p{
-	font-size: 0.8em;
-}
 
 
 
@@ -27,20 +11,3 @@
 	flex-wrap: wrap;
 }
 
-@media (min-width: 768px){
-	.worksheets{
-		padding: 0 5.5% 0 5.5%;
-	}
-	.worksheets h2{
-	font-size: 1.8em;
-	}
-}
-
-@media screen and (min-width: 80em){
-	.worksheets{
-		padding: 0 10% 0 10%;
-	}
-	.worksheets h2{
-		font-size: 2.5em;
-	}
-}

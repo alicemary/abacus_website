@@ -16,6 +16,10 @@ body{
 	background-color: $color-medium;
 }
 
+section{
+	margin-bottom: 1rem;
+}
+
 html{
 	box-sizing: border-box;
 	font-size: 16px;
@@ -31,133 +35,47 @@ a{
 	color: $color-complement;
 }
 
-
-
-
-
-
-header h1{
-	color: $color-darkest;
-	font-size: 1.87em;
-	margin: 0;
-	position: relative;
-	top: 7px;
+h2{
+	font-size: 1.2em;
 }
 
-header a{
-	text-decoration: none;
-}
-
-header h4{
-	color: $color-darkest;
+p{
 	font-size: 0.8em;
-	margin: 0.5rem 0 0 1rem;
-	font-weight: normal;
 }
 
-header{
-	height: 126px;
+body{
+	padding: 0 1rem 0 1rem;
 }
-
-.menu{
-	display: none;
-}
-
-header h3, header div:nth-child(2){
-	text-align: right;
-	margin: 1rem 1rem 0 0;
-}
-
-.title{
-	border-bottom: 1px solid $color-darkest;
-}
-
-.title div{
-	margin: 0 1em 0 1em;
-}
-
-header li{
-	font-size: 1.17em;
-}
-
-
-
 @media (min-width: 568px){
-	header{
-		height: 11rem;
-		padding-top: 1rem;
-	}
-	header h1{
-		font-size: 2.1em;
-		margin-top: 0.2rem;
-		top: 8px;
-	}
-	header h4 {
+	p{
 	font-size: 1em;
 	}
 }
 
-
-
 @media (min-width: 768px){
-	header{
-	height: 15rem;
-	padding-top: 1.5rem;
+	h2{
+	font-size: 1.8em;
 	}
-	.toggle{
-	display: none;
+	body{
+	padding: 0 5.5% 0 5.5%;
 	}
-	.menu{
-	display: initial;
-	}
-	header h1{
-		font-size: 2.5em;
-		margin-top: 3rem;
-		top: 10px;
-	}
-	header h4 {
-		margin-left: 5.5%;
-	}
-	.title{
-	border: none;
-	}
-	.title div{
-		margin: 0 5.5% 0 5.5%;
-		border-bottom: 2px solid $color-darkest;
-	}
-	header h3, header div:nth-child(2){
-		margin-right: 5.5%;	
-	}
-
 }
 
+@media screen and (min-width: 64em){
+	p{
+	font-size: 1.2em;
+	}
+}
 
 @media screen and (min-width: 80em){
-	header h4 {
-		margin-left: 10%;
-		margin-top: 1rem;
-		font-size: 1.5em;
+	h2{
+		font-size: 2.5em;
 	}
-	.title div{
-		margin: 0 10% 0 10%;
-	}
-	header h3, header div:nth-child(2){
-		margin-right: 10%;	
-	}
-	header li{
+	p{
 	font-size: 1.5em;
 	}
-	header h1{
-	font-size: 5em;
-	margin-top: 0.8em;
-	top: 20px;
-	}
-	header{
-		height: 25.8rem;
-		padding-top: 2.5em;
-	}
-	.title div{
-		border-bottom: 4px solid $color-darkest;
+	body{
+	padding: 0 10% 0 10%;
 	}
 }
 
@@ -167,10 +85,11 @@ header li{
 
 
 
-.levels{
-	padding: 0 1em 0 1em;
 
-}
+
+
+
+
 
 
 .levels button{
@@ -180,7 +99,7 @@ header li{
 	height: 6rem;
 	position: relative;	
 	margin-bottom: 1em;
-	width: calc(100vw - 2rem);
+	width: 100%;
 }
 
 .levels a{
@@ -206,15 +125,10 @@ header li{
 
 @media (min-width: 768px){
 	.levels{
-		padding: 0 5.5% 0 5.5%;
 		margin-top: 2rem;
 	}
 	.levels button{
 		height: 11rem; 
-		width: calc(100vw - 11%);
-	}
-	.levels h2{
-		font-size: 1.8em;
 	}
 }
 
@@ -236,15 +150,9 @@ header li{
 
 @media screen and (min-width: 80em){
 
-	.levels{
-		padding: 0 10% 0 10%;
-	}
 	.levels button{
 		height: 33vh;
 		width: calc((100vw - 30vw) /3);
-	}
-	.levels h2{
-		font-size: 2.5em;
 	}
 }
 

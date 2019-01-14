@@ -11,11 +11,16 @@ $color-complement: #996AAB;
 	width: calc(100vw - 2rem);
 	margin-bottom: 1em;
 	border-radius: 4px;
-	height: 4rem;
+	height: 4.5rem;
 }
 
 .modal-button h4{
 	color: $color-complement;
+	font-size: 1.1rem;
+}
+
+.modal-button p{
+	font-size: 0.8rem;
 }
 
 .modal {
@@ -49,22 +54,52 @@ $color-complement: #996AAB;
 	.modal-button{
 		width: calc((100vw - 4rem)/3);
 	}
+	.modal-button h4{
+		font-size: 1rem;
+	}
 }
 
 @media (min-width: 768px){
 	.modal-button{
 		font-size: 1.2em;
+		height: 5rem;
 	} 
 	.modal-button{
 		width: calc((100vw - 15.5vw)/3);
 	}
+	.modal-button h4{
+	font-size: 1.2rem;
+	}
+	.modal-button p{
+	font-size: 1rem;
 }
+}
+
+@media screen and (min-width: 64em){
+	.modal-button h4{
+	font-size: 1.4rem;
+	}
+	.modal-button p{
+	font-size: 1.2rem;
+	}
+	.modal-button{
+		border-radius: 8px;
+		height: 6rem;
+	}
+}
+
 
 @media screen and (min-width: 80em){
 	.modal-button{
 		width: calc((100vw - 30vw)/3);
-		height: 6rem;
+		height: 8rem;
 		font-size: 1.6em;
+	}
+	.modal-button h4{
+	font-size: 1.8rem;
+	}
+	.modal-button p{
+	font-size: 1.4rem;
 	}
 }
 

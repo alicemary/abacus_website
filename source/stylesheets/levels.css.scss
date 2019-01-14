@@ -1,15 +1,25 @@
+/*Beginner, Intermediate and Advanced pages use this formatting*/
+
 .worksheets{
-	padding: 0 1rem 0 1rem;
+	padding: 0 1rem 0 1rem; 
+}
+
+.worksheets section{
 	margin-bottom: 1rem;
 }
 
-.worksheets h2{
-	font-size: 1.4em;
+
+
+.worksheets-intro h2{
+	font-size: 1.2em;
 }
 
-.worksheets p{
+.worksheets-intro p{
 	font-size: 0.8em;
 }
+
+
+
 
 .level-button{
 	display: flex;

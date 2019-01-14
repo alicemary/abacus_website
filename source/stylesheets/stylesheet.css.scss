@@ -27,7 +27,9 @@ html{
 	padding: 0;
 }
 
-
+a{
+	color: $color-complement;
+}
 
 
 
@@ -50,6 +52,7 @@ header h4{
 	color: $color-darkest;
 	font-size: 0.8em;
 	margin: 0.5rem 0 0 1rem;
+	font-weight: normal;
 }
 
 header{
@@ -81,25 +84,24 @@ header li{
 
 @media (min-width: 568px){
 	header{
-		height: 14rem;
+		height: 11rem;
 		padding-top: 1rem;
 	}
 	header h1{
 		font-size: 2.1em;
-		margin-top: 1.6rem;
+		margin-top: 0.2rem;
 		top: 8px;
 	}
 	header h4 {
-	font-size: 1.17em;
+	font-size: 1em;
 	}
 }
 
 
 
-
 @media (min-width: 768px){
 	header{
-	height: 22rem;
+	height: 15rem;
 	padding-top: 1.5rem;
 	}
 	.toggle{
@@ -110,7 +112,7 @@ header li{
 	}
 	header h1{
 		font-size: 2.5em;
-		margin-top: 5rem;
+		margin-top: 3rem;
 		top: 10px;
 	}
 	header h4 {
@@ -129,11 +131,12 @@ header li{
 
 }
 
+
 @media screen and (min-width: 80em){
 	header h4 {
 		margin-left: 10%;
 		margin-top: 1rem;
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 	.title div{
 		margin: 0 10% 0 10%;
@@ -142,15 +145,15 @@ header li{
 		margin-right: 10%;	
 	}
 	header li{
-	font-size: 2em;
+	font-size: 1.5em;
 	}
 	header h1{
-	font-size: 6em;
-	margin-top: 1.5em;
-	top: 24px;
+	font-size: 5em;
+	margin-top: 0.8em;
+	top: 20px;
 	}
 	header{
-		height: 37.5rem;
+		height: 25.8rem;
 		padding-top: 2.5em;
 	}
 	.title div{
@@ -169,13 +172,15 @@ header li{
 
 }
 
-.levels div div{
+
+.levels button{
 	background-color: $color-lightest;
 	border-radius: 10px;
-	padding-left: 2em;
+	
 	height: 6rem;
 	position: relative;	
 	margin-bottom: 1em;
+	width: calc(100vw - 2rem);
 }
 
 .levels a{
@@ -184,14 +189,13 @@ header li{
 
 .levels h2{
 	color: $color-complement;
-	position: absolute;
-	top: 35%;
+
 }
 
 
 
 @media (min-width: 568px){
-	.levels div div{
+	.levels button{
 		height: 8rem;
 		margin-bottom: 1.5em;
 	}
@@ -203,9 +207,11 @@ header li{
 @media (min-width: 768px){
 	.levels{
 		padding: 0 5.5% 0 5.5%;
+		margin-top: 2rem;
 	}
-	.levels div div{
+	.levels button{
 		height: 11rem; 
+		width: calc(100vw - 11%);
 	}
 	.levels h2{
 		font-size: 1.8em;
@@ -214,13 +220,16 @@ header li{
 
 
 @media screen and (min-width: 64em){
+	.levels{
+		margin-top: 3rem;
+	}
 	.levels>div{
 		display: flex;
 		justify-content: space-between;
 	}
 
-	.levels div div{
-		width: calc(100%/3 - 5%);
+	.levels button{
+		width: calc((100vw - 16.5vw) /3);
 		height: 16rem;
 	}
 }
@@ -230,8 +239,9 @@ header li{
 	.levels{
 		padding: 0 10% 0 10%;
 	}
-	.levels div div{
+	.levels button{
 		height: 33vh;
+		width: calc((100vw - 30vw) /3);
 	}
 	.levels h2{
 		font-size: 2.5em;

@@ -1,10 +1,14 @@
 // menu toggle
 
 
-// (function (window, document) {
-//       document.getElementById('toggle').addEventListener('click', function (e) {
-//           document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
-//           document.getElementById('toggle').classList.toggle('x');
-//       });
-//       })(this, this.document);
+// function myFunction(){
+// 	document.getElementById("menu")
+// }
 
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}

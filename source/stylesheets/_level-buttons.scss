@@ -1,0 +1,94 @@
+@import 'mixins';
+
+/*levels
+
+This section is on the homepage and allows the user to choose whether they are a beginner, intermediate or advanced abacus user.
+*/
+
+
+.levels {
+	background-image: url("../images/numbers_small.jpg");
+	padding-top: 3rem;
+	
+	h2, p{
+		color: $color-white-trans;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	p{
+		margin-bottom: 2rem;
+		margin-top: 1em;
+	
+	}
+
+	.level-button p {
+		color: $color-darkest;
+		margin-top: 1em;
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+
+	.level-button h3{
+		margin-top: 1em;
+	}
+
+	.abacus-levels{
+		width: calc(100% - 6px);
+		margin: auto;
+		max-width: 529px;
+	}
+
+	.level-button{
+		@include button-border($color-white-med, $color-white);
+	}
+	.level-button:hover{
+		background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));	
+	} 
+
+	button{
+		height: 6rem;
+		margin-bottom: 2rem;
+		width: 100%;
+	}	
+}
+
+@media (min-width: 568px){
+	.levels button{
+		height: 200px;
+		margin-bottom: calc(2rem + 3px);
+	}
+}
+
+@media screen and (min-width: 64em){
+	.levels .abacus-levels{
+		max-width: none;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.levels button{
+		width: calc((100vw - 18vw) /3);
+		height: 240px;
+	}
+}
+
+@media screen and (min-width: 80em){
+	.levels button{
+		height: 33vh;
+	}
+}
+
+
+
+
+
+
+
+
+/*website introduction*/
+
+
+

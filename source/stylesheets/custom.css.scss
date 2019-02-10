@@ -1,18 +1,14 @@
+@import 'variables';
+
 /*Custom Worksheet Generator*/
 
-$color-darkest: #133c2a;
-$color-dark: #267855;
-$color-medium: #a0dea0;
-$color-light: #d9f2d9;
-$color-lightest: #ecf8ec;
-$color-complement: #996AAB;
+
+
 
 .form h2, .form h4{
 	text-align: center;
 }
 
-.custom-container{
-}
 
 
 .slidecontainer {
@@ -25,6 +21,7 @@ $color-complement: #996AAB;
   width: 100%;
   height: 1em;
   background: $color-medium;
+  background-color: #fff;
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
@@ -52,7 +49,7 @@ $color-complement: #996AAB;
 }
 
 .form{
-	background-color: $color-lightest;
+	background-color: $color-dark-light;
 	padding: 1em 0.5em 1em 0.5em;
 }
 
@@ -66,12 +63,12 @@ $color-complement: #996AAB;
 	padding-top: 0.5em;
 }
 .generate-button button{
-	background-color: $color-complement;
+	background-color: #fff;
 	padding: 0.8em;
 }
 
 .generate-button h4{
-	color: $color-lightest;
+	color: $color-complement;
 }
 
 .form h4:not(:last-child) {

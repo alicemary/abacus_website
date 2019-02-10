@@ -1,54 +1,26 @@
-$color-darkest: #133c2a;
-$color-dark: #267855;
-$color-medium: #a0dea0;
-$color-light: #d9f2d9;
-$color-lightest: #ecf8ec;
-$color-complement: #996AAB;
+@import 'variables';
+@import 'mixins';
 
+
+
+/* Modal Button */
 .modal-button{
-	background: $color-lightest;
+	@include button-border($color-dark-med, $color-white-light);
 	font-size: 1em;
 	width: calc(100vw - 2rem);
 	margin-bottom: 1em;
-	border-radius: 4px;
 	height: 4.5rem;
 }
 
 .modal-button h4{
-	color: $color-complement;
+	color: #fff;
 	font-size: 1.1rem;
 }
 
 .modal-button p{
 	font-size: 0.8rem;
+	color: #fff;
 }
-
-.modal {
-	z-index:3;
-	display:none;
-	padding-top:100px;
-	position:fixed;
-	left:0;
-	top:0;
-	width:100%;
-	height:100%;
-	overflow:auto;
-	background-color:rgb(0,0,0);
-	background-color:rgba(0,0,0,0.8);
-	font-size: 18px;
-	font-family: 'B612 Mono', monospace;
-	color: #000;
-}
-
-.modal-content {
-	margin:auto;
-	background-color:#fff;
-	position:relative;
-	padding:0;
-	outline:0;
-	width:80%;
-	border-radius: 6px;
-	}
 
 @media screen and (min-width: 35.5em){
 	.modal-button{
@@ -59,7 +31,7 @@ $color-complement: #996AAB;
 	}
 }
 
-@media (min-width: 768px){
+@media screen and (min-width: 768px){
 	.modal-button{
 		font-size: 1.2em;
 		height: 5rem;
@@ -88,7 +60,6 @@ $color-complement: #996AAB;
 	}
 }
 
-
 @media screen and (min-width: 80em){
 	.modal-button{
 		width: calc((100vw - 30vw)/3);
@@ -108,20 +79,48 @@ $color-complement: #996AAB;
 
 
 
-/*Meta data text box*/
+/* Modal layout */
 
-.modal aside{
-	display: flex;
-	justify-content: flex-end;
-	width: 95%;
+.modal {
+	z-index:3;
+	display:none;
+	padding-top:100px;
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	background-color:rgba(0,0,0,0.8);
 }
 
-.modal aside div{
-	
-	width: 500px;
-	max-height: 65px;
-	overflow: hidden;
+.modal-content {
+	margin:auto;
+	background-color:#fff;
+	padding: 1rem;
+	width:80%;
+	border-radius: 6px;
+	max-width: 391px;
 	}
+
+
+@media screen and (min-width: 603px){
+	.modal-content {
+		max-width: 661px;
+	}
+}
+
+
+
+
+
+/*Meta data text box*/
+.intro{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
 
 .modal p{
 	color: 	#D3D3D3;
@@ -134,10 +133,14 @@ $color-complement: #996AAB;
 
 
 
+/* Table */
+
 .exterior-table{
-	margin-top: 30px;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	font-family: 'B612 Mono', monospace;
+
 }
 
 .modal table, .modal td, .modal th{
@@ -145,17 +148,20 @@ $color-complement: #996AAB;
 }
 
 .modal table{
-	margin-left: 50px;
 	margin-bottom: 30px;
 	width: 90px;
 }
+
+/*.modal table:last-child{
+	margin-right: auto;	
+
+}*/
 
 .modal td, .modal th{
 	text-align: right;
 }
 
 .modal th{
-	/*padding-bottom: 5px;*/
 	color: 	#D3D3D3;
 }
 
@@ -166,6 +172,8 @@ $color-complement: #996AAB;
 
 
 
+
+/* Print */
 @media print{
 	.modal table{
 		margin-left: 15pt;
@@ -186,7 +194,8 @@ $color-complement: #996AAB;
 		height: 36px;
 	}
 	.modal-content{
-		width: 100%
+		width: 100%;
+		max-width: initial;
 	}
 	.modal span{
 		display: none;
@@ -197,13 +206,12 @@ $color-complement: #996AAB;
 }
 
 @page{
-	size: landscape;
+	size: landscape;	
+}
+
+
+/*
 	margin-top: 0.2in;
 	margin-bottom: 0;
 	margin-left: calc(0.4in - 15pt);
-	/*margin-right: 0;*/
-	margin-right: 0.4in;
-
-	
-}
-
+	margin-right: 0.4in;*/

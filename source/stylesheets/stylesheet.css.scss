@@ -1,29 +1,7 @@
-$color-darkest: #133c2a;
-$color-dark: #267855;
-$color-medium: #a0dea0;
-$color-light: #d9f2d9;
-$color-lightest: #ecf8ec;
-$color-complement: #996AAB;
-
-h1, h2, h3, h4, h5, h6, p{
-	color: $color-darkest;
-}
-
-h1{
-	font-size: 1.3em;	
-}
-
-.menu{
-	color: $color-dark;
-}
-
-body{
-	background-color: $color-medium;
-}
-
-section{
-	margin-bottom: 1.5rem;
-}
+@import 'variables';
+@import 'banner';
+@import 'level-buttons';
+@import 'mixins';
 
 html{
 	box-sizing: border-box;
@@ -36,21 +14,42 @@ html{
 	padding: 0;
 }
 
-a{
-	color: $color-complement;
+body{
+	background-color: #fff;
 }
 
-h2{
+
+
+
+/*fonts*/
+
+h1, h2, h3, h4, h5, h6, p{
+	color: $color-darkest;
+}
+
+h1{
+	font-size: 1.3em;	
+}
+
+h3{
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.1em;
+}
+
+a{
+	color: $color-lightest;
+	text-decoration: none;
+}
+
+h2, h3{
 	font-size: 1.1em;
+	font-family: 'Raleway', sans-serif;	
 }
 
 label, p, h4{
 	font-size: 0.8em;
 }
 
-body{
-	padding: 0 1rem 0 1rem;
-}
 @media (min-width: 568px){
 	label, p, h4{
 	font-size: 1em;
@@ -61,23 +60,17 @@ body{
 	h2{
 	font-size: 1.2em;
 	}
-	section{
-	margin-bottom: 2rem;
-	}
 }
 
 @media (min-width: 768px){
-	body{
-	padding: 0 5.5% 0 5.5%;
-	}
-	label, p, h4{
-	font-size: 1.1em;
-	}
 	h1{
 	font-size: 1.5em;	
 	}
-	h2{
+	h2,{
 	font-size: 1.3em;
+	}
+	label, p, h4{
+	font-size: 1.1em;
 	}
 }
 
@@ -88,11 +81,8 @@ body{
 	h1{
 	font-size: 1.6em;	
 	}
-	h2{
+	h2, h3{
 	font-size: 1.4em;
-	}
-	section{
-	margin-bottom: 3rem;
 	}
 }
 
@@ -103,12 +93,9 @@ body{
 	h2{
 		font-size: 1.75em;
 	}
-	label, p, h4{
+	label, h4{
 	font-size: 1.5em;
 	}
-	body{
-	padding: 0 10% 0 10%;
-	}
 }
 
 
@@ -116,75 +103,183 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-.levels button{
-	background-color: $color-lightest;
-	border-radius: 10px;
-	
-	height: 6rem;
-	position: relative;	
-	margin-bottom: 1em;
-	width: 100%;
+/*content and sections*/
+content{
+	margin-top: 1rem;
 }
 
-.levels a{
-	text-decoration: none;
+section p{
+	margin-top: 0.5em;
 }
 
-.levels h2{
-	color: $color-complement;
-
+section{
+	margin-bottom: 2rem;
+	padding: 0 1rem 0 1rem;
 }
-
-
 
 @media (min-width: 568px){
-	.levels button{
-		height: 8rem;
-		margin-bottom: 1.5em;
+	section{
+		margin-bottom: 2rem;
 	}
-
 }
-
-
 
 @media (min-width: 768px){
-
-	.levels button{
-		height: 11rem; 
+	section{
+		padding: 0 5.5% 0 5.5%;
 	}
 }
 
-
 @media screen and (min-width: 64em){
-	.levels{
-		margin-top: 3rem;
-	}
-	.levels>div{
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.levels button{
-		width: calc((100vw - 16.5vw) /3);
-		height: 16rem;
+	section{
+		margin-bottom: 3rem;
 	}
 }
 
 @media screen and (min-width: 80em){
+	/*content{
+		padding: 2rem 10% 0 10%;
+	}*/
+}
 
-	.levels button{
-		height: 33vh;
-		width: calc((100vw - 30vw) /3);
+
+
+
+
+
+
+
+/*homepage*/
+@media screen and (min-width: 64em){
+	.homepage{
+		margin-top: 3rem;
 	}
 }
+
+
+/*feature icons*/
+.features{
+	width: 100%;
+	margin-bottom: 0;
+	padding-top: 1rem;
+	.icons {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;		
+		
+		div {
+			text-align: center;
+			width: 200px;
+			margin: auto;
+			border-radius: 50%;
+		}
+		img{
+			margin-bottom: 2.5rem;
+			width: 140px;
+		}
+	}
+
+	h3{
+			color: $color-darkest;
+			margin-bottom: 1em;
+		}	
+
+
+	@media (min-width: 768px){
+		.icons {
+			flex-direction: row;
+		}
+
+		.icons div{
+			margin-bottom: 2rem;
+		}	
+		#target{
+			order: 1;
+		}
+
+		#difficulty{
+			order: 2;
+		}
+
+		#customize{
+			order: 3;
+		}
+	}
+
+	@media screen and (min-width: 64em){
+		.icons div {
+			width: 240px;			
+		}
+		.icons img {
+			width: 180px;
+		}
+
+	}
+}
+
+
+/*Custom Worksheet Generator on the Homepage*/
+.homepage-custom{
+	padding-top: 1rem;
+
+	.custom-button{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	button{
+		@include button-border($color-dark, $color-white-light);
+		/*border-radius: 8px;*/
+		/*width: 140px;*/
+		height: 50px;
+		text-align: center;
+		margin-top: 2rem;
+		/*background-color: $color-dark-dark;
+		border: 2px solid $color-white-light;
+		box-shadow: 0 0 0 3px $color-dark-dark;*/
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2rem;
+
+	}
+	h3{
+		color: $color-white-trans;
+		/*font-size: 1em;*/
+		
+		/*text-shadow: 0 1px 0 $color-white-light;*/
+	}
+}
+
+@media screen and (min-width: 768px){
+	.homepage-custom .custom-button{
+		justify-content: flex-start;
+		margin-left: 3px;
+	}
+}
+
+
+/*footer*/
+footer{
+	height: 3rem;
+	background-color: $color-darkest;
+	/*border-top: 3px solid $color-darkest;*/
+	/*box-shadow: 0 0 0 3px $color-darkest-med;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

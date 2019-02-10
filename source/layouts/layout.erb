@@ -16,11 +16,17 @@
     <%= stylesheet_link_tag "levels" %>
     <%= stylesheet_link_tag "header" %>
     <%= stylesheet_link_tag "custom" %>
+    <%= stylesheet_link_tag "skills" %>
+    <%= stylesheet_link_tag "abacus" %>
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
-    <%= javascript_include_tag "site" %>
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Poiret+One|Pontano+Sans|Rajdhani|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Bree+Serif|Caveat+Brush|Courgette|Dekko|Holtwood+One+SC|IM+Fell+English+SC|Just+Another+Hand|Marck+Script|Pangolin|Patrick+Hand|Rozha+One|Suez+One|Ultra|Walter+Turncoat" rel="stylesheet">
+    
   </head>
   <body>
     <%= partial 'partials/header' %>
     <%= yield %>
+    <%= partial 'partials/footer' %>
+    <%= javascript_include_tag "site" %>
   </body>
 </html>

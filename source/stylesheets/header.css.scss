@@ -10,10 +10,16 @@
 	height: 44px;
 
 	.menu-margin{
-		padding: 0 1em 0 1em;
+		padding: 0 5.5% 0 5.5%;
+	}
+	
+	.link{
+		opacity: 1;
+		transition: opacity 0.25s ease-in-out;
 	}
 	.hide{
 		visibility: hidden;
+		opacity: 0;
 	}
 	> div{
 		display: flex;
@@ -32,13 +38,51 @@
 	}
 
 	.hamburger{
-	width: 20px;
-	height: 15px;
-	float: right;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	}
+		width: 20px;
+		height: 16px;
+		float: right;
+		background: transparent;
+		border-top: 2px solid;
+		border-bottom: 2px solid;
+		transition: all .25s ease-in-out;
+		color: $color-white-trans-opaq;
+		display: block;
+		position: relative;
+		cursor: pointer;
+		font-size: 0;
+		/*display: flex;
+		flex-direction: column;
+		justify-content: space-between;*/
+
+		&:before,
+	  	&:after {
+		    content: '';
+		    display: block;
+		    width: 100%;
+		    height: 2px;		    
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;		    
+		    background: currentColor;		    
+		    transform: translate(-50%, -50%);
+		    transition: transform .25s ease-in-out;
+		}
+  	} 
+
+  	.hamburger:hover{
+  		color: $color-yellow;
+  	}
+
+  	.active{
+  		border-color: transparent;
+
+  		&:before{
+  			transform: translate(-50%, -50%) rotate(45deg);
+  		}
+  		&:after{
+  			transform: translate(-50%, -50%) rotate(-45deg);
+  		}
+  	}
 
 	.bar{
 		width: 100%;
@@ -65,11 +109,12 @@
 	.menu .menu-margin{
 		padding: 0 5.5% 0 0;
 	}
-	a:last-child{
+	.menu a:last-child{
 		display: none;
 	}
 	.menu .link{
 		visibility: visible;
+		opacity: 1;
 	}
 }
 
@@ -116,17 +161,23 @@ header {
 	}
 
 	img{
-		height: 68px;
+		height: 60px;
+		margin-top: 0.2rem;
 	}
 
+	/*font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway Dots', cursive;*/
+
 	h1{
-		font-family: 'Raleway', sans-serif;
+		font-family: 'Raleway Dots', cursive;
 		color: $color-darkest;
 		font-size: 1.8rem;
 		margin: 0 0 0 1rem;
 	}
 	span{
-		/*color: $color-darkest-med;*/
+		font-family: 'Raleway', sans-serif;
+		color: $color-darkest;
+		font-weight: bolder;
 		/*-webkit-text-stroke: 0.001em $color-darkest;*/
 	}
 }
@@ -156,11 +207,11 @@ header {
 }
 
 
-.menu .highlight{
+/*.menu .highlight{
 	background-color: $color-yellow;
-}
+}*/
 
-.menu .bar{
+/*.menu .bar{
 	transform: rotate(45deg);
-}
+}*/
 

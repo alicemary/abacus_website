@@ -8,7 +8,15 @@ This section is on the homepage and allows the user to choose whether they are a
 
 .levels {
 	background-image: url("../images/numbers_small.jpg");
-	padding-top: 3rem;
+	/*padding-top: 3rem;*/
+
+	> div{
+		margin: auto;
+		max-width: 600px;
+		margin-bottom: 3em;
+
+	}
+	
 	
 	h2, p{
 		color: $color-white-trans;
@@ -20,7 +28,7 @@ This section is on the homepage and allows the user to choose whether they are a
 
 	p{
 		margin-bottom: 2rem;
-		margin-top: 1em;
+		/*margin-top: 1em;*/
 	
 	}
 
@@ -33,24 +41,31 @@ This section is on the homepage and allows the user to choose whether they are a
 
 	.level-button h3{
 		margin-top: 1em;
+		font-size: 1.8em;
+		
 	}
 
 	.abacus-levels{
 		width: calc(100% - 6px);
 		margin: auto;
-		max-width: 529px;
+		max-width: 440px;
+
+		div:not(:last-child){
+			margin-bottom: 3rem;
+		}
 	}
 
 	.level-button{
 		@include button-border($color-white-med, $color-white);
+
 	}
 	.level-button:hover{
 		background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));	
 	} 
 
 	button{
-		height: 6rem;
-		margin-bottom: 2rem;
+		height: 8rem;
+		/*margin-bottom: 2rem;*/
 		width: 100%;
 	}	
 }
@@ -58,26 +73,45 @@ This section is on the homepage and allows the user to choose whether they are a
 @media (min-width: 568px){
 	.levels button{
 		height: 200px;
-		margin-bottom: calc(2rem + 3px);
+		/*margin-bottom: calc(2rem + 3px);*/
+	}
+
+	.levels .level-button h3{
+		font-size: 2em;
 	}
 }
 
 @media screen and (min-width: 64em){
 	.levels .abacus-levels{
-		max-width: none;
+		max-width: 1400px;
+	
 		display: flex;
 		justify-content: space-between;
+
+		div:not(:last-child){
+			margin-bottom: 0;
+		}
 	}
 
 	.levels button{
 		width: calc((100vw - 18vw) /3);
+		max-width: 370px;
 		height: 240px;
+	}
+
+	.levels .level-button h3{
+		/*font-size: 2.6em;*/
+	}
+
+	.levels > div{
+		max-width: 650px;
+		margin-bottom: 4.5rem;
 	}
 }
 
 @media screen and (min-width: 80em){
 	.levels button{
-		height: 33vh;
+		/*height: 33vh;*/
 	}
 }
 

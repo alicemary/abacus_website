@@ -36,11 +36,6 @@ h3{
 	letter-spacing: 0.1em;
 }
 
-a{
-	color: $color-lightest;
-	text-decoration: none;
-}
-
 h2, h3{
 	font-size: 1.1em;
 	font-family: 'Raleway', sans-serif;	
@@ -49,6 +44,7 @@ h2, h3{
 label, p, h4{
 	font-size: 0.8em;
 }
+
 
 @media (min-width: 568px){
 	label, p, h4{
@@ -105,41 +101,45 @@ label, p, h4{
 
 /*content and sections*/
 content{
-	margin-top: 1rem;
+	/*margin-top: 1rem;*/
 }
 
 section p{
-	margin-top: 0.5em;
+	margin-top: 0.8em;
 }
 
 section{
-	margin-bottom: 2rem;
-	padding: 0 1rem 0 1rem;
+	padding: 3rem 5.5% 3rem 5.5%;
+	
+	/*background-color: red;*/
 }
 
-@media (min-width: 568px){
+/*@media (min-width: 568px){
 	section{
 		margin-bottom: 2rem;
 	}
-}
+}*/
 
 @media (min-width: 768px){
-	section{
-		padding: 0 5.5% 0 5.5%;
-	}
+	/*section{
+		padding-left: 5.5%;
+		padding-right: 5.5%;
+	}*/
 }
 
 @media screen and (min-width: 64em){
 	section{
-		margin-bottom: 3rem;
+		padding-top: 4.5rem;
+		padding-bottom: 4.5rem;
 	}
 }
 
 @media screen and (min-width: 80em){
-	/*content{
-		padding: 2rem 10% 0 10%;
-	}*/
+	.homepage_abacus{
+		/*padding-top: 11.5rem;*/
+	}
 }
+
 
 
 
@@ -150,8 +150,19 @@ section{
 
 /*homepage*/
 @media screen and (min-width: 64em){
-	.homepage{
+	/*.homepage{
 		margin-top: 3rem;
+	}*/
+}
+
+.homepage_abacus > div {
+	margin: auto;
+	max-width: 600px;
+}
+
+@media (min-width: 64em){
+	.homepage_abacus > div {
+		max-width: 650px;
 	}
 }
 
@@ -159,39 +170,61 @@ section{
 /*feature icons*/
 .features{
 	width: 100%;
-	margin-bottom: 0;
-	padding-top: 1rem;
+	/*margin-bottom: 0;*/
+	padding-top: 0;
+	padding-left: 5.5%;
+	padding-right: 5.5%;
 	.icons {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;		
+		/*background-color: yellow;*/	
 		
 		div {
 			text-align: center;
-			width: 200px;
-			margin: auto;
-			border-radius: 50%;
+			width: 245px;
+			margin-left: auto;
+			margin-right: auto;
+			/*border-radius: 50%;*/
+			/*background-color: red;*/
 		}
 		img{
-			margin-bottom: 2.5rem;
+			/*margin-bottom: 2.5rem;*/
 			width: 140px;
 		}
+
 	}
 
 	h3{
+			font-family: 'Raleway Dots', cursive;
 			color: $color-darkest;
 			margin-bottom: 1em;
+			font-size: 1.2em;
 		}	
+
+	#customize, #target{
+		margin-bottom: 3rem;
+	}
 
 
 	@media (min-width: 768px){
+		
+
 		.icons {
 			flex-direction: row;
+
+			img {
+				width: 120px;
+			}
+
+		}
+
+		#customize, #target{
+			margin-bottom: 0;
 		}
 
 		.icons div{
-			margin-bottom: 2rem;
+			/*margin-bottom: 2rem;*/
 		}	
 		#target{
 			order: 1;
@@ -211,20 +244,32 @@ section{
 			width: 240px;			
 		}
 		.icons img {
-			width: 180px;
+			/*width: 180px;*/
 		}
 
+	}
+
+	@media screen and (min-width: 80em){
+		.icons img {
+			width: 180px;
+		}
 	}
 }
 
 
 /*Custom Worksheet Generator on the Homepage*/
 .homepage-custom{
-	padding-top: 1rem;
+	/*padding-top: 1rem;*/
 
 	.custom-button{
 		display: flex;
 		justify-content: space-around;
+	}
+
+	> div > div {
+		margin: auto;
+		max-width: 600px;
+
 	}
 
 	button{
@@ -233,17 +278,19 @@ section{
 		/*width: 140px;*/
 		height: 50px;
 		text-align: center;
-		margin-top: 2rem;
+		margin-top: 3rem;
 		/*background-color: $color-dark-dark;
 		border: 2px solid $color-white-light;
 		box-shadow: 0 0 0 3px $color-dark-dark;*/
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: 2rem;
+		background-image: linear-gradient(to right, $color-dark, $color-yellow);
+		/*margin-bottom: 1rem;*/
 
 	}
 	h3{
-		color: $color-white-trans;
+		color: $color-white;
+
 		/*font-size: 1em;*/
 		
 		/*text-shadow: 0 1px 0 $color-white-light;*/
@@ -252,10 +299,21 @@ section{
 
 @media screen and (min-width: 768px){
 	.homepage-custom .custom-button{
-		justify-content: flex-start;
-		margin-left: 3px;
+		/*justify-content: flex-start;*/
+		/*margin-left: 3px;*/
 	}
 }
+
+@media screen and (min-width: 64em){
+	.homepage-custom > div > div{
+		max-width: 650px;
+	}
+	.homepage-custom button{
+		margin-top: 4.5rem;
+	}
+}
+
+
 
 
 /*footer*/

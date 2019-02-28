@@ -3,76 +3,7 @@
 
 
 
-/* Modal Button */
-.modal-button{
-	@include button-border($color-dark-med, $color-white-light);
-	font-size: 1em;
-	width: calc(100vw - 2rem);
-	margin-bottom: 1em;
-	height: 4.5rem;
-}
 
-.modal-button h4{
-	color: #fff;
-	font-size: 1.1rem;
-}
-
-.modal-button p{
-	font-size: 0.8rem;
-	color: #fff;
-}
-
-@media screen and (min-width: 35.5em){
-	.modal-button{
-		width: calc((100vw - 4rem)/3);
-	}
-	.modal-button h4{
-		font-size: 1rem;
-	}
-}
-
-@media screen and (min-width: 768px){
-	.modal-button{
-		font-size: 1.2em;
-		height: 5rem;
-	} 
-	.modal-button{
-		width: calc((100vw - 15.5vw)/3);
-	}
-	.modal-button h4{
-	font-size: 1.2rem;
-	}
-	.modal-button p{
-	font-size: 1rem;
-}
-}
-
-@media screen and (min-width: 64em){
-	.modal-button h4{
-	font-size: 1.4rem;
-	}
-	.modal-button p{
-	font-size: 1.2rem;
-	}
-	.modal-button{
-		border-radius: 8px;
-		height: 6rem;
-	}
-}
-
-@media screen and (min-width: 80em){
-	.modal-button{
-		width: calc((100vw - 30vw)/3);
-		height: 8rem;
-		font-size: 1.6em;
-	}
-	.modal-button h4{
-	font-size: 1.8rem;
-	}
-	.modal-button p{
-	font-size: 1.4rem;
-	}
-}
 
 
 
@@ -152,10 +83,6 @@
 	width: 90px;
 }
 
-/*.modal table:last-child{
-	margin-right: auto;	
-
-}*/
 
 .modal td, .modal th{
 	text-align: right;
@@ -209,9 +136,3 @@
 	size: landscape;	
 }
 
-
-/*
-	margin-top: 0.2in;
-	margin-bottom: 0;
-	margin-left: calc(0.4in - 15pt);
-	margin-right: 0.4in;*/

@@ -1,62 +1,84 @@
-<content class="pure-g custom-container">
-	<section class="pure-u-1 pure-u-md-3-4 pure-u-lg-2-3">
-		<h1>Custom Worksheet Generator</h1>
-		<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<div class="custom-banner">	
+</div>
+
+<content class="custom">
+	<section>
+		<div>
+			<h2>Custom Worksheet Generator</h2>
+			<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		</div>
 	</section>
-	<section class="pure-u-1">
+	<section>
 		<form class="pure-g form">
 			<div class="pure-u-1">
 				<h2>Worksheet Generator</h2>
 			</div>
-			<div class="slidecontainer pure-u-1">
-				<h4><span id="demo"</span> Numbers Per Question</h4>
-  				<input type="range" min="1" max="100" value="5" class="slider" id="myRange">
+			<div class="pure-u-1 slidecontainer">
+				<h4>Numbers Per Question: &nbsp<span id="numbers" class="num"></span></h4>
+  				<input type="range" min="1" max="30" value="7" class="slider" id="numberRange">
 			</div>
-			<div class="slidecontainer pure-u-1">
-				<h4><span id="demo"></span> Digits Per Number</h4>
-  				<input type="range" min="1" max="100" value="5" class="slider" id="myRange">
+			<div class="pure-u-1 slidecontainer">
+				<h4>Digits Per Number: &nbsp<span id="digits" class="num"></span></h4>
+  				<input type="range" min="1" max="10" value="3" class="slider" id="digitRange">
 			</div>
-			<div class="pure-u-1">
-				<h4>Included Skills</h4>
+			<div class="pure-u-1 check">
+				<h4>Included Skills:</h4>
 				<div class="operations">
+
 					<div>
-					<input type="checkbox">
-					<label>+ Direct</label>
+						<label class="check-cont"><span>+ </span>Direct
+							<input type="checkbox"><span class="checkmark"></span>
+						</label>
 					</div>
+
 					<div>
-					<input type="checkbox">
-					<label>+ Pool 5</label>
+						<label class="check-cont"><span>+ </span>Pull <span class="lab">5</span>
+							<input type="checkbox"><span class="checkmark"></span>
+						</label>
 					</div>
+
 					<div>
-					<input type="checkbox">
-					<label>+ Carry</label>
+						<label class="check-cont"><span>+ </span>Carry
+							<input type="checkbox"><span class="checkmark"></span>
+						</label>
 					</div>
+				
 					<div>
-					<input type="checkbox">
-					<label>+ Break 5</label>
+						<label class="check-cont"><span>+ </span>Break <span class="lab">5</span>
+							<input type="checkbox"><span class="checkmark"></span>
+						</label>
 					</div>
+
 					<div>
-					<input type="checkbox">
-					<label>- Direct</label>
+						<label class="check-cont"><span>- </span>Direct
+							<input type="checkbox"><span class="checkmark"></span>
+						</label>
 					</div>
+					
 					<div>
-					<input type="checkbox">
-					<label>- Pool 5</label>
+						<label class="check-cont"><span>- </span>Pull <span class="lab">5</span>
+							<input type="checkbox"><span class="checkmark"></span>
+						</label>
 					</div>
+
 					<div>
-					<input type="checkbox">
-					<label>- Borrow</label>
+						<label class="check-cont"><span>- </span>Borrow
+							<input type="checkbox"><span class="checkmark"></span>
+						</label>
 					</div>
+					
 					<div>
-					<input type="checkbox">
-					<label>- Break 5</label>
+						<label class="check-cont"><span>- </span>Break <span class="lab">5</span>
+							<input type="checkbox"><span class="checkmark"></span>
+						</label>
 					</div>
 				</div>
 			</div>
-			<div class="pure-u-1 generate-button">
-				<button class="pure-button">
-					<h4>Generate Worksheet</h4>
+			<div class="pure-u-1 generate-button press-button">
+				<button type="button" class="pure-button">
+					<h4>Submit</h4>
 				</button>
+				<%= partial 'partials/modal' %>
 			</div>
 		</form>
 	</section>

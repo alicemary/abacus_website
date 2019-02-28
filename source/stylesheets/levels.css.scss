@@ -1,15 +1,246 @@
+@import 'variables';
+@import 'mixins';
+
+
 /*Beginner, Intermediate and Advanced pages use this formatting*/
 
 
 
 
-.worksheets{
-	margin-top: 1rem;
+.levels{
+	width: 100%;
+
+	section:first-child{
+		padding-bottom: 2rem;
+	}
+	
+
+	section:last-child{
+		padding-top: 0;
+	}
+
+	
+
+	.arrow{
+		margin-top: 1rem;
+		width: 100%;
+		height: 60px;
+		
+
+		a{
+				text-decoration: none;
+			}
+
+		h4{
+			/*font-family: 'Raleway Dots', cursive;*/
+			color: $color-dark;		
+
+		}
+
+		img{
+			width: 50px;
+			margin-top: 0.5rem;
+		}
+
+		div{
+			width: 50%;
+			display: inline-block;
+		}
+		.arrow-left{
+			float: left;
+			img{				
+				margin-left: 0;
+			}
+		}
+		.arrow-right{
+			text-align: right;
+
+			float: right;
+			img{
+				margin-right: 0;
+			}
+		}
+	}
+
+	.test{
+		clear: both;
+	}
+
+	
+	
 }
 
+@media screen and (min-width: 35.5em){
+	.levels{
+		.arrow{
+			height: 65px;
+			
+			img{
+				/*width: 70px;*/
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 48em){
+	.levels{
+		section:first-child{
+			padding-bottom: 2.5rem;
+		}
+	}
+}
+
+@media screen and (min-width: 64em){
+	.levels{
+		.arrow{
+			margin-top: 2rem;
+			max-width: none;
+			height: 85px;
+
+			img{
+				width: 70px;
+			}
+		}
+		section:first-child{
+			padding-bottom: 3rem;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+/* Modal Button */
 .levels-button{
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	width: calc(100% - 6px);
+
+	> div{
+	width: 100%;
+	margin: auto;
+	background-color: red;
+
+
+		.modal-button{
+			/*@include button-border($color-dark-med, $color-white-light);*/
+			@include button-border($color-dark, $color-white-trans);
+			background-image: linear-gradient(to top, $color-darkest, $color-dark-med);
+			font-size: 1em;
+			width: 100%;
+			margin-bottom: 1.5rem;
+			/*height: 4.5rem;*/
+			
+			h4{
+				color: $color-white;
+				font-size: 1.1rem;
+				/*font-family: 'Raleway Dots', cursive;*/
+			}
+
+			p{
+				font-size: 0.8rem;
+				color: $color-white-med;
+				/*font-family: 'Raleway Dots', cursive;*/
+			}
+		}
+	}
 }
 
+
+
+@media screen and (min-width: 35.5em){
+	
+	.levels-button{
+
+		> div{
+			width: calc((100% - 5.5vw - 18px) / 3);
+			margin: 0;
+
+			.modal-button{
+				/*width: calc(100% - 5.5vw);*/
+				
+				
+				h4{
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media screen and (min-width: 768px){
+	.levels-button{
+
+		> div{
+		
+			.modal-button{
+				font-size: 1.2em;
+				/*height: 5rem;*/
+				/*width: calc((100vw - 15.5vw)/3);*/
+				
+				h4{
+					font-size: 1.2rem;
+				}
+
+				p{
+					font-size: 1rem;
+				}
+			}	
+		}	 
+	}
+}
+
+
+@media screen and (min-width: 64em){
+	.levels-button{	
+		width: 100%;
+		max-width: none;
+
+		> div{
+
+			.modal-button{
+				border-radius: 8px;
+				/*height: 6rem;*/
+				
+			
+				h4{
+					font-size: 1.4rem;
+				}
+
+				p{
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 80em){
+	.levels-button{
+
+		> div{
+
+			.modal-button{
+				
+				/*height: 8rem;*/
+				font-size: 1.6em;
+				margin-bottom: 2.5rem;
+			
+				h4{
+					font-size: 1.8rem;
+				}
+
+				p{
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}

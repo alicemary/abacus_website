@@ -1,140 +1,265 @@
 @import 'variables';
-
+@import 'mixins';
 /*Custom Worksheet Generator*/
 
+.custom-banner{
+	height: 9px;
+	width: 100%;
+	/*background-color: $color-dark-med;*/
+/*	background-image: linear-gradient(to left, $color-dark, $color-yellow);
+*/	background-color: $color-dark;
 
-
-
-.form h2, .form h4{
-	text-align: center;
 }
 
 
 
-.slidecontainer {
-	width: 80%;
-	margin: auto;
+.custom > section:first-child{
+	padding-bottom: 0;
 }
 
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 1em;
-  background: $color-medium;
-  background-color: #fff;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+.custom section:last-child{
+	padding-right: 0;
+	padding-left: 0;
 }
 
-.slider:hover {
-  opacity: 1;
-}
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 1em;
-  height: 1em;
-  background: $color-darkest;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 1em;
-  height: 1em;
-  background: #4CAF50;
-  cursor: pointer;
-}
 
 .form{
-	background-color: $color-dark-light;
-	padding: 1em 0.5em 1em 0.5em;
-}
 
-.form > div:not(:last-child){
-	margin-bottom: 1em;
-}
+	background-image: url("../images/beads.png");
+	padding: 3rem 5.5vw 3rem 5.5vw;
+	position: relative;
 
-.generate-button{
-	display: flex;
-	justify-content: center;
-	padding-top: 0.5em;
-}
-.generate-button button{
-	background-color: #fff;
-	padding: 0.8em;
-}
+	> div:not(:last-child){
+	margin-bottom: 2.5rem;
+	}
+	
+	h2{
+		/*font-size: 1.6em;*/
+		/*font-size: 1.1em;*/
+		text-align: center;
+		/*font-family: 'Bree Serif', serif;*/
+	}
 
-.generate-button h4{
-	color: $color-complement;
-}
+	h4:not(:last-child) {
+		padding-bottom: 0.8em;
+		/*font-family: 'Raleway Dots', cursive;*/
+	}
 
-.form h4:not(:last-child) {
-	padding-bottom: 0.5em;
-	padding-top: 0.5em;
-}
+	.num{
+		font-family: 'B612 Mono', monospace;
+		font-size: 1.2em;
+		font-weight: lighter;
+	}
 
-.operations{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 90%;
-	margin: auto;
+	.lab{
+		font-family: 'B612 Mono', monospace;
+		font-size: 1em;
+		font-weight: 100;
+	}
 
-}
+	
 
-.operations div{
-	width: 50%;
-	padding-bottom: 0.5em;
-}
+	.slidecontainer {
+		margin: auto;
+		max-width: 706px;
+		
+		.slider {
+		  -webkit-appearance: none;
+		  width: 100%;
+		  height: 1em;
+		  background-color: #fff;
+		  outline: none;
+		  -webkit-transition: .2s;
+		}
 
-label{
-	font-family: 'B612 Mono', monospace;
-	color: $color-darkest;
+
+		.slider::-webkit-slider-thumb {
+		  -webkit-appearance: none;
+		  appearance: none;
+		  width: 1em;
+		  height: 1em;
+		  background: $color-darkest-trans;
+		  cursor: pointer;
+		}
+
+		.slider::-moz-range-thumb {
+		  width: 1em;
+		  height: 1em;
+		  background: white;
+		  cursor: pointer;
+		}
+	}
+
+	.check{
+		max-width: 706px;
+		margin: auto;
+
+		.check-cont{
+			
+			display: block;
+			position: relative;
+			padding-left: 29px;
+
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+
+			input{
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+				height: 0;
+				width: 0;
+			}
+
+			input:checked ~ .checkmark{
+				background-color: #2196F3;
+			}
+
+			.checkmark:after{
+				content: "";
+				position: absolute;
+				display: none;
+			}
+
+			input:checked ~ .checkmark:after{
+				display: block;
+			}
+
+			.checkmark:after{
+				left: 5px;
+				top: 1px;
+				width: 7px;
+				height: 12px;
+				border: solid white;
+				border-width: 0 3px 3px 0;
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+
+			.checkmark{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 16px;
+				width: 16px;
+				background-color: $color-white;
+				margin-top: 3px;
+			}
+
+		}
+
+
+	}
+
+	.generate-button{
+		display: flex;
+		justify-content: center;
+
+		/*padding-top: 0.5em;*/
+
+		h4{
+			color: $color-darkest-trans;
+			/*font-family: 'Bree Serif', serif;*/
+			/*font-size: 1.3em;*/
+			/*font-size: 1.6em;*/
+			font-size: 1.1em;
+		}
+		button{
+			@include button-border($color-white, $color-darkest-med);
+			padding: 0.8em 3em 0.8em 3em;
+			background-color: white;
+			color: white;
+		}
+	}
+
+	.operations{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin: auto;
+		div{
+			width: 50%;
+			margin-bottom: 1em;
+
+			label{
+				color: $color-darkest;
+				/*font-family: 'Raleway Dots', cursive;*/
+				padding-left: 0.3em;
+				
+			}
+
+			label span{
+				font-family: 'B612 Mono', monospace;
+			}		
+		}
+	}
 }
 
 @media screen and (min-width: 35.5em){
 	.form{
-		padding: 1em;
+
+		.generate-button h4{
+			font-size: 1.2em;
 		}
-	.operations{
-		justify-content: flex-start;
-	}
-	.operations div{
-		width: calc(100%/3);
+
+		.operations{
+			justify-content: flex-start;
+
+			div{
+				width: calc(100%/3);
+			}
+		}
 	}
 }
+
+
 @media screen and (min-width: 48em){
 	.form{
-		padding: 1.5em;
+
+		.generate-button h4{
+			font-size: 1.3em;
+		}
 	}
-	.operations{
-		width: 80%;
+
+	.custom section:last-child{
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 }
 
 @media screen and (min-width: 64em){
+
 	.form{
-		padding: 1.5em 2em 1.5em 2em;
-	}
-	.operations{
-		width: 70%;
-	}
-	.operations div{
-		width: calc(100% / 4)
-	}
-	.slidecontainer {
-		width: 70%;
+		padding-top: 4.5rem;
+		padding-bottom: 4.5rem;
+
+		> div:not(:last-child){
+			margin-bottom: 3.5rem;
+		}
+
+		.generate-button h4{
+			font-size: 1.4em;
+		}
+		.operations{
+			div{
+				width: calc(100% / 4)
+			}
+		}
+	}	
+}
+
+@media screen and (min-width: 80em){
+	.form{
+		.generate-button h4{
+			font-size: 1.75em;
+		}
 	}
 }
 
-	
-@media screen and (min-width: 80em){
-	.form{
-		padding: 2em 3em 2em 3em;
-		}
-}
 
 

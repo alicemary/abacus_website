@@ -1,150 +1,8 @@
 @import 'variables';
 
-
-
-
-/*menu list*/
-.menu{
-	text-align: right;
-	background-image: linear-gradient(to right, $color-darkest, $color-dark 90%);
-	height: 44px;
-
-	.menu-margin{
-		padding: 0 5.5% 0 5.5%;
-	}
-	
-	.link{
-		opacity: 1;
-		transition: opacity 0.25s ease-in-out;
-	}
-	.hide{
-		visibility: hidden;
-		opacity: 0;
-	}
-	> div{
-		display: flex;
-		list-style-type: none;
-		justify-content: space-between;
-	}
-
-	a{
-		padding: 0.8em 0 0.8em 0;
-		font-size: 1em;
-		color: $color-white-trans;
-	}
-
-	a:hover{
-		color: $color-yellow;
-	}
-
-	.hamburger{
-		width: 20px;
-		height: 16px;
-		float: right;
-		background: transparent;
-		border-top: 2px solid;
-		border-bottom: 2px solid;
-		transition: all .25s ease-in-out;
-		color: $color-white-trans-opaq;
-		display: block;
-		position: relative;
-		cursor: pointer;
-		font-size: 0;
-		/*display: flex;
-		flex-direction: column;
-		justify-content: space-between;*/
-
-		&:before,
-	  	&:after {
-		    content: '';
-		    display: block;
-		    width: 100%;
-		    height: 2px;		    
-		    position: absolute;
-		    top: 50%;
-		    left: 50%;		    
-		    background: currentColor;		    
-		    transform: translate(-50%, -50%);
-		    transition: transform .25s ease-in-out;
-		}
-  	} 
-
-  	.hamburger:hover{
-  		color: $color-yellow;
-  	}
-
-  	.active{
-  		border-color: transparent;
-
-  		&:before{
-  			transform: translate(-50%, -50%) rotate(45deg);
-  		}
-  		&:after{
-  			transform: translate(-50%, -50%) rotate(-45deg);
-  		}
-  	}
-
-	.bar{
-		width: 100%;
-		height: 3px;
-		background-color: $color-white-trans;
-		border-radius: 3px;
-	}
-}
-
-
-@media (min-width: 568px){
-	.menu{
-		text-align: right;		
-		> div{
-		width: 60%;
-		float: right;
-		justify-content: space-between;
-		max-width: 384px
-		}
-	}
-}
-
-@media (min-width: 768px){
-	.menu .menu-margin{
-		padding: 0 5.5% 0 0;
-	}
-	.menu a:last-child{
-		display: none;
-	}
-	.menu .link{
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-@media screen and (min-width: 64em){
-	.menu{
-		height: 53px;
-		
-		a{
-			font-size: 1.2em;
-		}	
-	
-		> div{
-		max-width: 484px
-		}
-	}
-}
-
-@media screen and (min-width: 80em){
-	.menu{
-		width: 100%;
-	}
-}
-
-
-
-
-/*logo*/
-	
+/*header*/
 header {
-	border-bottom: 2px solid $color-dark;
+	border-bottom: 2px solid $color-darkest;
 	height: 168px;
 
 	a{
@@ -153,7 +11,7 @@ header {
 
 	.title{
 		width: 100%;
-		padding: 27px 1rem 2rem 1rem;
+		padding: 27px 5.5% 2rem 5.5%;
 		height: 122px;
 		background-color: $color-white;
 		display: flex;
@@ -165,9 +23,6 @@ header {
 		margin-top: 0.2rem;
 	}
 
-	/*font-family: 'Raleway', sans-serif;
-	font-family: 'Raleway Dots', cursive;*/
-
 	h1{
 		font-family: 'Raleway Dots', cursive;
 		color: $color-darkest;
@@ -178,7 +33,6 @@ header {
 		font-family: 'Raleway', sans-serif;
 		color: $color-darkest;
 		font-weight: bolder;
-		/*-webkit-text-stroke: 0.001em $color-darkest;*/
 	}
 }
 
@@ -196,10 +50,12 @@ header {
 			height: 160px;
 			padding-top: 39px;
 		}
+
 		h1{
 			font-size: 2.2em;
 			margin: 0 0 0 2rem;
 		}
+
 		img{
 			height: 82px;
 		}
@@ -207,11 +63,283 @@ header {
 }
 
 
-/*.menu .highlight{
-	background-color: $color-yellow;
-}*/
 
-/*.menu .bar{
-	transform: rotate(45deg);
-}*/
+/*menu*/
+.menu{
+	height: 44px;
+	padding: 0 5.5% 0 5.5%;
+	background-image: linear-gradient(to right, $color-darkest, $color-dark 90%);
+
+	.menu-margin{
+		width: 100%;
+		float: right;
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+
+		> li{
+			display: inline-block;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			
+			flex-grow: 1;	
+
+			/*height: 100%;*/
+			/*background-color: red;*/
+		}
+
+		>li:last-child{
+			justify-content: flex-end;
+		}
+
+		/*Mouse over or tab key will highlight the button along with the dropdown menu*/
+		> li:hover:not(:last-child),
+		> li:focus-within:not(:last-child) {
+			color: $color-dark;
+			background-color: $color-darkest;
+		}
+
+		li:focus-within:not(:last-child) a{
+			outline: none;
+		}
+	}
+
+	a{
+		color: $color-white-trans;
+		font-size: 0.8em;
+		/*height: 100%;*/
+		/*background-color: yellow;	*/	
+	}
+
+	.link{
+		opacity: 1;
+		transition: opacity 0.25s ease-in-out;
+		padding-top: 1.1em;
+		padding-bottom: 0.8em;
+		/*padding-left: 0.5rem;*/
+		height: 100%;
+		text-align: center;	
+		width: 100%;
+	}
+
+	.hide{
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.highlight{
+		background-color: $color-white-med;
+		color: $color-darkest;
+	}
+
+
+}
+
+@media screen and (min-width: 35.5em){
+	.menu {
+		a{
+			font-size: 1em;
+		}
+
+		.link{
+			padding-top: 0.8em;
+		}
+	}
+}
+
+@media (min-width: 768px){
+	.menu{
+		.link, .hide{
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+@media screen and (min-width: 64em){
+	.menu{
+		height: 53px;
+		
+		a{
+			font-size: 1.2em;
+		}	
+	}
+}
+
+
+
+
+
+
+/*hamburger menu*/
+.hamburger{
+	width: 20px;
+	height: 16px;
+	float: right;
+	background: transparent;
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	transition: all .05s ease-in-out;
+	color: $color-white-trans-opaq;
+	display: block;
+	position: relative;
+	cursor: pointer;
+	margin-top: auto;
+
+	&:before,
+	&:after {
+	    content: '';
+	    display: block;
+	    width: 100%;
+	    height: 2px;		    
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;		    
+	    background: currentColor;		    
+	    transform: translate(-50%, -50%);
+	    transition: transform .25s ease-in-out;
+	}
+}
+
+.hamburger:hover{
+  		color: $color-darkest;
+  	}
+
+.active{
+	border-color: transparent;
+
+	&:before{
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	&:after{
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+}
+
+@media screen and (min-width: 768px){
+	.menu-margin{
+		max-width: 400px;
+	}
+
+	.menu-margin li:last-child{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 64em){
+	.menu-margin{
+		max-width: 500px;
+	}
+}
+@media screen and (min-width: 80em){
+	.menu-margin{
+		max-width: 700px;
+	}
+}
+
+
+
+
+
+
+/*dropdown menu*/
+
+
+#levels{
+	position: relative;
+	ul{
+		
+		position: absolute;
+		top: 44px;
+		height: 40px;
+		width: 91px;
+		visibility: hidden;
+		opacity: 0;
+
+
+		li{
+			display: block;
+			background-color: $color-dark;
+			padding-left: 0.5rem;
+			height: 30px;
+			padding-top: 0.3em;
+		}
+
+		li:hover,
+		li:focus-within {
+			background-color: $color-darkest;
+		}
+
+	}
+
+	.remove{
+		display: none;
+	}
+}
+
+/*when the levels tab has the mouse over or tab key used, the dropdown will be visible*/
+#levels:hover ul,
+#levels:focus-within ul{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+@media screen and (min-width: 568px){
+	#levels{
+		ul{
+			width: 110px;
+
+			li{
+				height: 35px;
+				padding-top: 0.5em;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 64em){
+	#levels{
+		ul{
+			top: 53px;
+			width: 131px;
+
+			li{
+				height: 45px;
+				padding-top: 0.7em;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -26,9 +26,14 @@
     
   </head>
   <body>
+    <div class="entire-content">
     <%= partial 'partials/header' %>
     <%= yield %>
+    </div>
+    <div>
     <%= partial 'partials/footer' %>
+    </div>
+
     <%= javascript_include_tag "site" %>
   </body>
 </html>

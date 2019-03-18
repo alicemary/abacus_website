@@ -1,61 +1,123 @@
 @import 'variables';
 @import 'mixins';
 
-
-
-
-
-
-
-
+body{
+	position: relative;
+}
 
 
 /* Modal layout */
-
 .modal {
 	z-index:3;
 	display:none;
-	padding-top:100px;
-	position:fixed;
+	padding-top:44px;
+	padding-bottom: 48px;
+	/*position: fixed;*/
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height: 100%;
+	overflow: auto;
+	background-color:rgba(0,0,0,0.8);
+
+
+	.modal-content {
+		margin:auto;
+
+		background-color: $color-white;
+		width: calc(100% - 11%);
+		border-radius: 6px;
+
+		
+		p{
+			color: 	#B0B0B0;
+		}
+
+		.intro{
+			width: 100%;
+			/*display: flex;
+			justify-content: space-between;
+			position: relative;*/
+			/*background-color: yellow;*/
+
+			section{
+				padding-left: 5.5vw;
+				padding-right: 5.5vw;
+			}
+
+			
+		}
+	}
+
+	.modal-x{
+				position: absolute;
+				top: 59px;
+				right: 11vw;
+				font-size: 2.5em;
+			}
+
+	.modal-x:hover{
+		cursor: pointer;
+	}
+}
+
+@media screen and (min-width: 64em){
+	.modal{
+		padding-top: 53px;
+	}
+}
+
+/*.modal {
+	z-index:3;
+	display:none;
+	padding-top:44px;
+	padding-bottom: 48px;
+	position: fixed;
 	left:0;
 	top:0;
 	width:100%;
 	height:100%;
 	overflow:auto;
 	background-color:rgba(0,0,0,0.8);
-}
-
-.modal-content {
-	margin:auto;
-	background-color:#fff;
-	padding: 1rem;
-	width:80%;
-	border-radius: 6px;
-	max-width: 391px;
-	}
 
 
-@media screen and (min-width: 603px){
 	.modal-content {
-		max-width: 661px;
+		margin:auto;
+		background-color: $color-white;
+		width: calc(100% - 11%);
+		border-radius: 6px;
+
+		
+		p{
+			color: 	#B0B0B0;
+		}
+
+		.intro{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+
+			section{
+				padding-left: 5.5vw;
+				padding-right: 5.5vw;
+			}
+
+			.modal-x{
+				position: absolute;
+				top: 0.2rem;
+				right: 5.5%;
+				font-size: 2.5em;
+			}
+
+			.modal-x:hover{
+				cursor: pointer;
+			}
+		}
 	}
-}
+}*/
 
-
-
-
-
-/*Meta data text box*/
-.intro{
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-}
-
-
-.modal p{
-	color: 	#D3D3D3;
-}
 
 
 
@@ -71,64 +133,219 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	font-family: 'B612 Mono', monospace;
+	width: 95%;
+	margin-left: 0;
+
+	
+	/*max-width: 365px;*/
+
+	table, td, th{
+		border-collapse: collapse;
+	}
+
+	table{
+		margin-bottom: 3rem;
+		/*width: 62px;*/
+		/*width: calc(100% / 4);*/
+		width: 20%;
+		flex-grow: 1;
+
+		font-size: 0.8em;
+	}
+
+	.big-table{
+		width: 100%;
+		font-size: 1em;
+
+		th,
+		td{
+			padding-right: 35%;
+
+		}
+	}
+	
+
+	td{
+		text-align: right;
+		padding-right: 10%;
+	}
+
+	th{
+		/*color: 	#D3D3D3;*/
+		color: $color-darkest;
+		/*padding-top: 0.2em;*/
+		text-align: right;
+		padding-right: 10%;
+	}
+
+	td span{
+		border-bottom: 1px solid black;
+	}
+	/*tr:last-child{
+		border-bottom: 1px solid black;
+		width: 30px;
+	}*/
+}
+
+/*.exterior-table:last-child{
+	padding-bottom: 3rem;
+}*/
+
+
+@media screen and (min-width: 35.5em){
+	.exterior-table{
+
+		.big-table{
+			width: 20%;
+			font-size: 0.8em;
+
+			th,
+			td{
+				padding-right: 0%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 48em){
+	.exterior-table{
+		width: 93%;
+
+
+		table,
+		.big-table{
+			width: 20%;
+			font-size: 1em;
+		}
+	}
 
 }
 
-.modal table, .modal td, .modal th{
-	border-collapse: collapse;
+@media screen and (min-width: 64em){
+	.exterior-table{
+		width: 97%;
+
+		table{
+			/*width: 10%;*/
+			width: 10%;
+			margin-bottom: 4.5rem;
+		}
+	}
+
+	.big-exterior{
+		width: 90%;
+	}
+
+	/*.exterior-table:last-child{
+		padding-bottom: 4.5rem;
+	}*/
 }
 
-.modal table{
-	margin-bottom: 30px;
-	width: 90px;
+@media screen and (min-width: 80em){
+	.exterior-table{
+		table{
+			/*width: 10%;*/
+			width: 10%;
+		}
+		.big-table{
+			width: 20%;
+		}
+	}
 }
 
-
-.modal td, .modal th{
-	text-align: right;
-}
-
-.modal th{
-	color: 	#D3D3D3;
-}
-
-
-.modal tr:last-child{
-	border-bottom: 1px solid black;
-}
 
 
 
 
 /* Print */
+
+
 @media print{
-	.modal table{
-		margin-left: 15pt;
-		margin-bottom: 45pt;
-		width: 60pt;
-		font-size: 14pt;
+	header, 
+	.custom-banner,
+	content,
+	footer {
+			display: none;
+		}
+
+	.modal{
+		padding-top: 0;
+		padding-bottom: 0;
+		position: static;
+
+
+
+		.modal-content{
+			width: 100%;
+			border-radius: 0;
+			max-width: initial;
+
+			.intro section{
+				padding-left: 20px;
+				padding-top: 0;
+			}
+		
+			table,
+			.big-table{
+				margin-left: 15pt;
+				margin-bottom: 45pt;
+				width: 60pt;
+				font-size: 14pt;
+				page-break-inside: avoid;	
+			}
+
+			.big-table{
+				width: 120pt;
+
+				td,
+				th{
+					padding-right: 20%;
+				}
+			}
+
+			table{
+				td,
+				th{
+					padding-right: 10%;
+				}
+				margin-bottom: 30px;
+			}
+
+			p{
+				font-size: 8pt;
+			}
+
+			aside{
+				width: 100%;
+			}
+
+			aside div{
+				height: 36px;
+			}
+		}
+
+		.modal-x{
+			display: none;
+		}
 	}
+
 	.exterior-table{
 		margin-top: 5pt;
-	}
-	.modal p{
-		font-size: 8pt;
-	}
-	.modal aside{
 		width: 100%;
+		padding-right: 20px;
+		/*padding-bottom: 0;*/
 	}
-	.modal aside div{
-		height: 36px;
+	
+	.exterior-table:last-child{
+		margin-top: 0;
+		padding-bottom: 0;
 	}
-	.modal-content{
-		width: 100%;
-		max-width: initial;
+
+	.break{
+		page-break-after: always;
 	}
-	.modal span{
-		display: none;
-	}
-	.modal {
-		padding-top:0px;
+	.break-before{
+		page-break-before: always;
 	}
 }
 

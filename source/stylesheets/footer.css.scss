@@ -1,0 +1,55 @@
+@import 'variables';
+/*footer*/
+footer{
+	background-color: $color-darkest;
+
+	div{
+		width: 100%;
+		height: 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;	
+	}
+
+	p{
+		color: rgba(255, 255, 255, 0.4);
+	}
+
+	div:first-child{
+		height: 4px;
+		width: 100%;
+		background: linear-gradient(to right, $color-yellow-dark, $color-yellow-light, $color-yellow, #93785f);
+	}
+}
+
+@media screen and (min-width: 35.5em){
+	footer{
+		div{
+			justify-content: flex-start;
+
+			p{
+				padding-left: 5.5vw;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 64em){
+	footer{
+		p{
+			padding-left: 10vw;
+		}
+	}
+}
+
+@media screen and (min-width: 80em){
+	footer{
+		div{
+			height: 4.5rem;
+		}
+		
+		div:first-child{
+			height: 7px;
+		}
+	}
+}

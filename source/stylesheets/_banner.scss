@@ -1,41 +1,32 @@
 @import 'variables';
-/*banner*/
+/*banner on the homepage*/
 
 
-.banner{
-	/*background-image: url("../images/color_angle_chopped.jpg");*/
-/*	background-image: url("../images/color_angle_close.jpg");
-*//*	background-image: url("../images/color_angle.jpg");
-*/		
+.banner{		
 	position: relative;
-/*	filter: blur(1px);
-*/	
-	/*margin-bottom: 3rem;*/
 	width: 100%;
-	height: 400px;
+	height: 437px;
 
 	div{
-		position: absolute;
-		
+		position: absolute;	
 	}
 
-	.background{
-		background-image: url("../images/color_angle_second.jpg");
-		background-size: cover;
+	div:not(:last-child){
 		height: 100%;
 		left: 0;
 		top: 0;
 		width: 100%;
+	}
+
+	.background{
+		background-image: url("../images/abacus.jpg");
+		background-size: cover;
 		z-index: 1;
 	}
 
 	.overlay{
-		background-image: url("../images/darkest_med_circle.svg");
+		background-image: url("../images/overlay.svg");
 		background-size: 3px;
-		height: 100%;
-		left: 0;
-		top: 0;
-		width: 100%;
 		z-index: 2;
 	}
 		
@@ -44,11 +35,9 @@
 		height: auto;
 		top: initial;
 		left: 5.5%;
-
 		bottom: 5.5%;
-		/*background-color: red;*/
 
-		h2 {
+		h1 {
 			color: $color-white;
 			font-size: 2.2em;
 			font-family: 'Bree Serif', serif;
@@ -63,27 +52,19 @@
 	.banner div{
 		bottom: 10vw;
 	}
+
 	.banner .tagline{
 
-		h2{
+		h1{
 			font-size: 2.2em;
 		}
 	}
 }
 
 @media (min-width: 768px){
-	/*.banner .tagline h2{
-		font-size: 2em;
-		transition: 0.4s;
-	}*/
-
 	.banner .tagline{
 		bottom: 18%;
 		left: 10%;
-		h2{
-			font-size: 2.6em;
-		}
-
 	}
 }
 
@@ -92,17 +73,10 @@
 		height: 553px;
 
 		.tagline{			
-			h2{
-				font-size: 3.6em;
-				/*line-height: 1.6em;*/
+			h1{
+				font-size: 2.6em;
 			}
 		}
 	}	
-
 }
 
-@media (min-width: 80em){
-	.banner{
-		height: 800px;
-	}
-}

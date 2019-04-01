@@ -25,7 +25,7 @@ let slider2 = document.getElementById("digitRange");
 
 let output2 = document.getElementById("digits");
 
-let table = document.querySelectorAll("table");
+
 
 let exterior = document.querySelectorAll(".exterior-table")
 
@@ -55,7 +55,8 @@ const CARRYBORROW = document.querySelector('#carry-borrow');
 
 let metaTextBox = document.querySelector('.intro section');
 
-
+let printPage = document.querySelector("#print");
+		
 // Main Menu
 
 //Hide the main menu when the page loads. 
@@ -134,6 +135,9 @@ function showModal(){
 	// document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 
+
+
+
 }
 
 
@@ -198,15 +202,29 @@ let addText = function(title, info){
 
 };
 
-// console.log(addText("Test Title", "Test info"));
+let tableClass = function(digitsPerNumber){
+	console.log("tableClass function");
+	let table = document.querySelectorAll("table");
+	if (digitsPerNumber > 5){
+		table.forEach( function(item) {
+			item.classList.add("big-table");
+		});	
+	} else{
+		table.forEach( function(item) {
+			item.classList.remove("big-table");
+		});
+	}
+};
+
 
 
 // Put an array of Questions into tables in the HTML
 // New table elements filled with questions are added to the exteriorTable
-let addTable = function(arrayOfQuestions, title, info){
+let addTable = function(arrayOfQuestions, title, info, digitsPerNumber){
 	// console.log("add table function");
 	// console.log(title, info);
 	addText(title, info);
+	
 	for (let question of arrayOfQuestions){
 			let newTable =  document.createElement("table");
 			let i = 0;
@@ -234,6 +252,8 @@ let addTable = function(arrayOfQuestions, title, info){
 			};
 			exteriorTable[0].appendChild(newTable);
 	}
+	tableClass(digitsPerNumber);
+
 };
 
 
@@ -425,15 +445,36 @@ let submitButton = function(lengthOfQuestion, numberOfDigits, numberOfQuestions)
 
 
 // determines the number of questions to produce.
-let questionLength = function(numbersPerQuestion){
+let questionLength = function(numbersPerQuestion, digitsPerNumber){
 	// console.log("questionLength function");
 	
-	if (numbersPerQuestion < 6){
-		return 30;
-	} else if(numbersPerQuestion < 11){
+	// if (numbersPerQuestion < 6){
+	// 	// return 30;
+	// 	return 40;
+	// } else if(numbersPerQuestion < 11){
+	// 	return 20;
+	// }else {
+	// 	return 10;
+	// };
+	console.log(numbersPerQuestion);
+	console.log(digitsPerNumber);
+
+	if (numbersPerQuestion <= 3 && digitsPerNumber <= 5){
+		return 40;
+	} else if(numbersPerQuestion <= 3 && digitsPerNumber >= 6){
 		return 20;
-	}else {
+	} else if(numbersPerQuestion <= 5 && digitsPerNumber <= 5){
+		return 30;
+	} else if (numbersPerQuestion <= 5 && digitsPerNumber >= 6){
+		return 15;
+	} else if (numbersPerQuestion <= 10 && digitsPerNumber <= 5){
+		return 20;
+	} else if (numbersPerQuestion <= 10 && digitsPerNumber >= 6){
 		return 10;
+	} else if (numbersPerQuestion > 10 && digitsPerNumber <= 5){
+		return 10;
+	} else{
+		return 5;
 	};
 };	
 
@@ -682,7 +723,7 @@ let directNums = function(numbersPerQuestion, digitsPerQuestion, numberOfQuestio
 let levelButtons = function(functionName, numbersPerQuestion, digitsPerQuestion){
 	// console.log("level buttons function");
 	
-	let questionList = buildTable(numbersPerQuestion, digitsPerQuestion, questionLength(numbersPerQuestion), functionName);
+	let questionList = buildTable(numbersPerQuestion, digitsPerQuestion, questionLength(numbersPerQuestion, digitsPerQuestion), functionName);
 
 	return questionList;
 };
@@ -703,7 +744,7 @@ let customButton = function(numbersPerQuestion, digitsPerQuestion, direct, pullb
 		functionName = randomDirect;		
 	};
 	
-	let questionList = buildTable(numbersPerQuestion, digitsPerQuestion, questionLength(numbersPerQuestion), functionName, 9);
+	let questionList = buildTable(numbersPerQuestion, digitsPerQuestion, questionLength(numbersPerQuestion, digitsPerQuestion), functionName, 9);
 
 	return questionList;
 };
@@ -725,7 +766,7 @@ if (page.classList.value == "levels"){
 
 		// Question length is used to determine the number of questions to generate 
 		for (let i = 0; i < lengths.length; i++){
-			questions.push(questionLength(lengths[i]));
+			questions.push(questionLength(lengths[i], digits[i]));
 		};
 
 		// Each button has an event listener assigned and the values for that button are used to generate
@@ -758,7 +799,7 @@ if (page.classList.value == "levels"){
 
 		// the length of each question is used to determine the number of questions to generate 
 		for (let i = 0; i < lengths.length; i++){
-			questions.push(questionLength(lengths[i]));
+			questions.push(questionLength(lengths[i], digits[i]));
 		};
 
 		// Each button has an event listener assigned and the values for that button are used to generate
@@ -792,7 +833,7 @@ if (page.classList.value == "levels"){
 
 		// the length of each question is used to determine the number of questions to generate 
 		for (let i = 0; i < lengths.length; i++){
-			questions.push(questionLength(lengths[i]));
+			questions.push(questionLength(lengths[i], digits[i]));
 		};
 		
 		// Each button has an event listener assigned and the values for that button are used to generate
@@ -807,6 +848,11 @@ if (page.classList.value == "levels"){
 			advanced[level].addEventListener("keypress", function(){addTable( buildTable(lengths[level], digits[level], questions[level], randomCarryBorrow, 9), title, info)}, false);
 		};
 	};
+
+	printPage.addEventListener("click",	function(){window.print()}, false);
+	printPage.addEventListener("keypress",	function(){window.print()}, false);
+
+
 };
 
 
@@ -841,9 +887,9 @@ if (page.classList.value == "custom"){
 			console.log("lots of digits");
 			// Change the display when numbers have lots of digits
 			// Add the big-table class to each table
-			table.forEach( function(item) {
-				item.classList.add("big-table");
-			});
+			// table.forEach( function(item) {
+			// 	item.classList.add("big-table");
+			// });
 
 
 			exterior.forEach( function(item){
@@ -854,9 +900,9 @@ if (page.classList.value == "custom"){
 		// If there are only a few digits
 		if (output2.innerHTML <= 5){
 			console.log("less than 6 digits");
-			table.forEach( function(item) {
-				item.classList.remove("big-table");
-			});
+			// table.forEach( function(item) {
+			// 	item.classList.remove("big-table");
+			// });
 
 			exterior.forEach( function(item){
 				item.classList.remove("big-exterior");
@@ -913,7 +959,23 @@ if (page.classList.value == "custom"){
 	// console.log("custom");
 	// button[0].addEventListener("click", function(){addTable(submitButton(slider.value, slider2.value, 20))}, false);
 	// button[0].addEventListener("click", function(){addTable(anyQuestion(slider.value, slider2.value, 20))}, false);
-	button[0].addEventListener("click", function(){addTable(customButton(slider.value, slider2.value, DIRECT.checked, PULLBREAK.checked, CARRYBORROW.checked), title, info())}, false);
+	button[0].addEventListener("click", function(){
+		addTable(customButton(slider.value, slider2.value, DIRECT.checked, PULLBREAK.checked, CARRYBORROW.checked), title, info(), slider2.value);
+		printPage = document.querySelector("#print");
+	}, false);
+
+
+	printPage.addEventListener("click",	function(){window.print()}, false);
+	printPage.addEventListener("keypress",	function(){window.print()}, false);
+	// if (slider2.value > 5){
+	// 	table.forEach( function(item) {
+	// 			item.classList.add("big-table");
+	// 		});
+	// } else {
+	// 	table.forEach( function(item) {
+	// 			item.classList.remove("big-table");
+	// 		});
+	// };
 
 };
 

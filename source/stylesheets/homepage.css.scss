@@ -1,0 +1,285 @@
+@import 'variables';
+@import 'banner';
+@import 'mixins';
+
+/*homepage*/
+
+
+/*feature icons*/
+.features{
+	padding-top: 0;
+
+	.icons {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		
+		div {
+			text-align: center;
+			width: 215px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		img{
+			width: 140px;
+		}
+	}
+
+	h3{	
+			font-family: 'Open Sans', sans-serif;
+			font-family: 'Raleway', sans-serif;
+			color: #c1a07a;
+			color: #93785f;
+			margin-bottom: 1em;
+			font-weight: 500;
+		}	
+
+	#customize, #target{
+		margin-bottom: 3rem;
+	}
+}
+
+@media (min-width: 768px){
+	.features{
+		padding-right: 5.5%;
+		padding-left: 5.5%;
+
+		.icons {
+			flex-direction: row;
+			max-width: none;
+			justify-content: space-between;
+
+			img {
+				width: 120px;
+			}
+
+			div{
+				margin: initial;
+			}
+		}
+
+		#customize, #target{
+			margin-bottom: 0;
+		}
+
+		#target{
+			order: 1;
+		}
+
+		#difficulty{
+			order: 2;
+		}
+
+		#customize{
+			order: 3;
+		}
+	}
+}
+
+
+@media screen and (min-width: 64em){
+	.features{
+		padding-right: 10vw;
+		padding-left: 10vw;
+
+		h3{
+			font-size: 1.2em;
+		}
+	}
+}
+
+@media screen and (min-width: 80em){
+	.features{
+		.icons img {
+			width: 180px;
+		}
+	}
+	
+}
+
+
+
+/*levels*/
+.home-levels {
+	background-image: url("../images/course_background.jpg");
+
+	> div{	
+		max-width: 600px;
+		margin-bottom: 3em;
+		margin: auto;
+	}
+
+	> div:not(:first-child){
+		margin: auto;
+	}
+	
+	h2, p{
+		color: $color-white-trans;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	#home-page-level{
+		p{
+			margin-bottom: 3rem;
+		}	
+	}
+	
+	.level-button p {
+		color: $color-darkest;
+		margin-top: 0.8em;
+		font-size: 0.9em;
+		line-height: 1.4em;
+		padding-bottom: 0.5em;
+	}
+
+	.level-button h3{
+		margin-top: 1em;
+		font-size: 1.6em;
+		
+	}
+
+	.abacus-levels{
+		width: calc(100% - 6px);
+		margin: auto;
+
+		div:not(:last-child){
+			margin-bottom: 3rem;
+		}
+	}
+
+	.level-button{
+		@include button-border($color-white-med, $color-white);
+		padding: 1em 2em 0.5em 2em;
+	}
+
+	.level-button:hover{
+		background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));	
+	} 
+
+	button{
+		width: 100%;
+	}	
+}
+
+@media (min-width: 568px){
+	.home-levels {
+		.level-button h3{
+			font-size: 1.8em;
+		}
+	}
+}
+
+@media screen and (min-width: 64em){
+	.home-levels{
+		padding-left: 0;
+		padding-right: 0;
+
+		> div:first-child{
+			margin-left: 10vw;
+			max-width: 650px;
+			margin-bottom: 4.5rem;
+		}
+
+		#home-page-level{
+			p{
+				margin-bottom: 3rem;
+			}	
+		}
+		
+		.abacus-levels{
+			max-width: none;
+			width: calc(100vw - 20vw - 6px);
+			display: flex;
+			justify-content: space-between;
+
+			div {
+				width: 23vw;
+			}
+
+			div:not(:last-child){
+				margin-bottom: 0;
+			}
+		}
+		
+		button{
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (min-width: 80em){
+	.home-levels .level-button h3{
+		font-size: 2em;
+	}
+}
+
+
+
+/*Custom Worksheet Generator*/
+.homepage-custom{
+
+	.custom-button{
+		margin-top: 3rem;
+		max-width: 220px;
+		margin-bottom: 4.5rem;
+	}
+
+	button{
+		@include button-border(#436355, $color-white-trans);	
+		background-color: $color-darkest;
+		width: 100%;		
+		width: 100%;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		text-align: center;
+		margin: auto;
+		position: relative;
+	}
+
+	h4{
+		background: linear-gradient(to right, $color-yellow-light, $color-yellow 80%, $color-yellow-dark);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+@media screen and (min-width: 568px){
+	.homepage-custom {
+		h3{
+			font-size: 1.8em;
+		}
+	}
+}
+
+@media screen and (min-width: 64em){
+	.homepage-custom .custom-button{
+		margin: auto;
+		margin-top: 4.5rem;
+		width: 300px;
+		max-width: none;
+	}
+}
+
+@media screen and (min-width: 80em){
+	.homepage-custom{
+		display: flex;
+		justify-content: space-between;
+
+		h3{
+			font-size: 2em;
+		}
+
+		.custom-button{
+			margin-right: 0;
+		}
+
+		button{
+			padding-top: 1.5em;
+			padding-bottom: 1.5em;
+		}
+	}
+}

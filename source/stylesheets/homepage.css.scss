@@ -27,10 +27,8 @@
 	}
 
 	h3{	
-			font-family: 'Open Sans', sans-serif;
 			font-family: 'Raleway', sans-serif;
-			color: #c1a07a;
-			color: #93785f;
+			color: $color-yellow-darkest;
 			margin-bottom: 1em;
 			font-weight: 500;
 		}	
@@ -115,7 +113,7 @@
 	}
 	
 	h2, p{
-		color: $color-white-trans;
+		color: rgba(255, 255, 255, 0.8);
 	}
 
 	a{
@@ -127,9 +125,14 @@
 			margin-bottom: 3rem;
 		}	
 	}
-	
+
+	.level-button h4{
+		font-weight: 600;
+	}
+
 	.level-button p {
 		color: $color-darkest;
+		font-weight: 400;
 		margin-top: 0.8em;
 		font-size: 0.9em;
 		line-height: 1.4em;
@@ -152,17 +155,16 @@
 	}
 
 	.level-button{
-		@include button-border($color-white-med, $color-white);
+		@include button-border(rgba(255, 255, 255, 0.6), #fff);
 		padding: 1em 2em 0.5em 2em;
+		width: 100%;
+		text-align: center;
 	}
 
 	.level-button:hover{
-		background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));	
+		background-image: linear-gradient(rgba(255, 255, 255, 0.2), $color-transparent-grey);	
 	} 
 
-	button{
-		width: 100%;
-	}	
 }
 
 @media (min-width: 568px){
@@ -204,10 +206,6 @@
 				margin-bottom: 0;
 			}
 		}
-		
-		button{
-			width: 100%;
-		}
 	}
 }
 
@@ -224,26 +222,28 @@
 
 	.custom-button{
 		margin-top: 3rem;
-		max-width: 220px;
 		margin-bottom: 4.5rem;
-	}
 
-	button{
-		@include button-border(#436355, $color-white-trans);	
-		background-color: $color-darkest;
-		width: 100%;		
-		width: 100%;
-		padding-top: 1em;
-		padding-bottom: 1em;
-		text-align: center;
-		margin: auto;
-		position: relative;
+		a{
+			text-decoration: none;
+		}
+
+		div{
+			@include button-border($color-darkest-opaque, rgba(255, 255, 255, 0.8));	
+			background-color: $color-darkest;
+			width: 100%;		
+			width: 100%;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			text-align: center;
+			margin: auto;
+			position: relative;
+		}
 	}
 
 	h4{
-		background: linear-gradient(to right, $color-yellow-light, $color-yellow 80%, $color-yellow-dark);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		font-family: 'Open Sans', sans-serif;
+		color: rgba(255, 255, 255, 0.8);
 	}
 }
 
@@ -277,7 +277,7 @@
 			margin-right: 0;
 		}
 
-		button{
+		div{
 			padding-top: 1.5em;
 			padding-bottom: 1.5em;
 		}

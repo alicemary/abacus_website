@@ -1,97 +1,66 @@
-<!-- <div class="custom-banner">	
-</div> -->
 <content class="levels" id="intermediate-page">
 	<section>
 		<div>
-		 	<h1>Intermediate Worksheets</h1>	
-		 	<p>This is the second chapter of the series focused on multi-digit addition and subtraction. Questions in the intermediate course are a little more challenging as they require the <a href="http://localhost:4567/dir/skills.html">pull-5 movement</a> and the <a href="http://localhost:4567/dir/skills.html">break-5 movement</a>. Get to know the abacus a little better by going through each question without looking at the abacus.</p>			
-		</div>
-		<!-- <div>
-			<h3>Pull-5</h3>
-			<p>During addition Pull-5 occurs when the top bead is "pulled down" (added) while the small-friend value is subtracted from the bottom beads. An example is when 2 is on the abacus and we want to add 4. The small-friend of 4 is 1 so we would pull-down the top bead and subtract 1 of the bottom beads.</p>
-		</div>
-		<div>
-			<h3>Break-5</h3>
-			<p>When subracting, Break-5 occurs when the top bead is broken (subracted) and the small-friend value is added using the bottom beads. An example is when 5 is on the abacus and we want to subtract 1. The small friend of 1 is 4 so we break (subract) the top bead and add 4 bottom beads.</p>
-		</div> -->
-		
+		 	<h1>Intermediate Abacus Fundamentals Course</h1>	
+		 	<p>This is the second chapter of the series focused on multi-digit addition and subtraction. Questions in the intermediate course are a little more challenging as they require the <%= link_to 'pull-5 and break-5 movements', '/dir/skills.html#pull-5-movement', :relative => true %>. Get to know the abacus a little better by going through each question without looking at the abacus.</p>			
+		</div>		
 	</section>
+
 	<section class="test">
 		<div class="pure-g levels-button">
 			<div class="pure-u-1 pure-u-sm-1-3 press-button">
-				<button class="pure-button modal-button intermediate">
+				<button class="modal-button intermediate" type="button" role="button" aria-label="intermediate level 1: pull-5 break-5">
 					<h4>Level 1</h4>
 					<p>Pull-5 / Break-5:<br>single digit</p>
 				</button>
 			</div>
 			<div class="pure-u-1 pure-u-sm-1-3 press-button">
-				<button class="pure-button modal-button intermediate">
+				<button class="modal-button intermediate" type="button" role="button" aria-label="intermediate level 2: pull-5 break-5">
 					<h4>Level 2</h4>
 					<p>Pull-5 / Break-5:<br>single digit</p>
 				</button>
 			</div>
 			<div class="pure-u-1 pure-u-sm-1-3 press-button">
-				<button class="pure-button modal-button intermediate">
+				<button class="modal-button intermediate" type="button" role="button" aria-label="intermediate level 3: pull-5 break-5">
 					<h4>Level 3</h4>
 					<p>Pull-5 / Break-5:<br>double digit</p>
 				</button>
 			</div>
 			<div class="pure-u-1 pure-u-sm-1-3 press-button">
-				<button class="pure-button modal-button intermediate">
+				<button class="modal-button intermediate" type="button" role="button" aria-label="intermediate level 4: pull-5 break-5">
 					<h4>Level 4</h4>
 					<p>Pull-5 / Break-5:<br>double digit</p>
 				</button>
 			</div>
 			<div class="pure-u-1 pure-u-sm-1-3 press-button">
-				<button class="pure-button modal-button intermediate">
+				<button class="modal-button intermediate" type="button" role="button" aria-label="intermediate level 5: pull-5 break-5">
 					<h4>Level 5</h4>
 					<p>Pull-5 / Break-5:<br>triple digit</p>
 				</button>
 			</div>
 			<div class="pure-u-1 pure-u-sm-1-3 press-button">
-				<button class="pure-button modal-button intermediate">
+				<button class="modal-button intermediate" type="button" role="button" aria-label="intermediate level 6: pull-5 break-5">
 					<h4>Level 6</h4>
 					<p>Pull-5 / Break-5:<br>triple digit</p>
 				</button>
 			</div>
-			<!-- <div class="pure-u-1 pure-u-sm-1-3 press-button">
-				<button class="pure-button modal-button intermediate">
-					<h4>Level 7</h4>
-					<p>double digit numbers<br>(up to 9)</p>
-				</button>
-			</div>
-			<div class="pure-u-1 pure-u-sm-1-3 press-button">
-				<button class="pure-button modal-button intermediate">
-					<h4>Level 8</h4>
-					<p>5 double digit numbers<br>(up to 9)</p>
-				</button>
-			</div>
-			<div class="pure-u-1 pure-u-sm-1-3 press-button">
-				<button class="pure-button modal-button intermediate">
-					<h4>Level 9</h4>
-					<p>triple digit numbers<br>(up to 9)</p>
-				</button>
-			</div> -->
 		</div>
 	</section>
+
 	<section>
 		<div class="arrow">
 			<div class="arrow-left">
-					<a href="http://localhost:4567/dir/beginner.html">
-					<h4>Beginner</h4>
-					<!-- <img src="../images/opoleft.svg"> -->
-					<img src="../images/darkleft_1.svg">
+					<a href="http://localhost:4567/dir/beginner.html" title="beginner abacus fundamentals course">
+						<h4>Beginner Course</h4>
+						<%= image_tag 'left_arrow.svg' %>
 					</a>
 			</div>
 			<div class="arrow-right">
-				<a href="http://localhost:4567/dir/advanced.html">
-				<h4>Advanced</h4>
-				<!-- <img src="../images/oporight.svg"> -->
-				<img src="../images/darkright_1.svg">
-				
+				<a href="http://localhost:4567/dir/advanced.html" title="advanced abacus fundamentals course">
+					<h4>Advanced Course</h4>
+					<%= image_tag 'right_arrow.svg' %>
 				</a>
 			</div>
-
 		</div>
 	</section>
 </content>

@@ -3,44 +3,43 @@
   <nav class="menu" role="navigation">    
       <ul class="menu-margin" >
         <li >
-          <a class="link" href="http://localhost:4567/">home</a>
+          <a href="/" class="link" tabindex="2">home</a>
         </li>
         <li >
-          <a class="link"  href="http://localhost:4567/dir/abacus.html">abacus</a>
+          <%= link_to 'abacus', '/dir/abacus.html', :relative => true, :class => 'link'%>
         </li>
         <li >
-          <a class="link"  href="http://localhost:4567/dir/skills.html">skills</a>
+          <%= link_to 'skills', '/dir/skills.html', :relative => true, :class => 'link' %>
         </li>
         <li  id="levels">
-          <a href="http://localhost:4567/dir/beginner.html" class="link">levels</a>
-          
+          <%= link_to 'levels', '/dir/beginner.html', :relative => true, :class => 'link' %>   
           <ul>
             <li>
-              <a href="http://localhost:4567/dir/beginner.html">Beginner</a>
+              <%= link_to 'beginner', '/dir/beginner.html', :relative => true, :class => 'link' %>  
             </li>
             <li>
-              <a href="http://localhost:4567/dir/intermediate.html">Intermediate</a>
+              <%= link_to 'intermediate', '/dir/intermediate.html', :relative => true, :class => 'link' %>
             </li>
             <li>
-              <a href="http://localhost:4567/dir/advanced.html">Advanced</a>
+              <%= link_to 'advanced', '/dir/advanced.html', :relative => true, :class => 'link' %>
             </li>
           </ul>
 
         </li>
         <li >
-          <a class="link"  href="http://localhost:4567/dir/custom.html">custom</a>
+          <%= link_to 'custom', '/dir/custom.html', :relative => true, :class => 'link' %>
         </li>
         <li>
-          <a href="#" class="click-hamburger"><div class="hamburger"></div></a>
+          <button class="click-hamburger" type="button" role="button" aria-label="main menu" tabindex="1"><div class="hamburger" ></div></button>
         </li>
       </ul>
   </nav>
 
   
   <div class="title">
-      <a href="/">
+      <a href="/" title="progressive abacus homepage">
       <div>
-          <img src="../images/abacus_logo.svg">
+          <img src="../images/abacus_logo.svg" alt="Progressive Abacus Logo">
         <div>
           <h1><span>Progressive</span><br>Abacus</h1> 
         </div>

@@ -2,11 +2,6 @@
 @import 'mixins';
 /*Custom Worksheet Generator*/
 
-.custom-banner{
-	height: 9px;
-	width: 100%;
-	background-color: $color-dark;
-}
 
 .custom > section:first-child{
 	padding-bottom: 0;
@@ -129,7 +124,7 @@
 				left: 0;
 				height: 16px;
 				width: 16px;
-				background-color: $color-white;
+				background-color: #fff;
 				margin-top: 3px;
 			}
 		}
@@ -140,16 +135,17 @@
 		justify-content: center;
 
 		h4{
-			background: linear-gradient(to right, $color-yellow-light, $color-yellow 80%, $color-yellow-dark);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			font-size: 1.1em;
+			color: rgba(255, 255, 255, 0.8);
+			font-family: 'Open Sans', sans-serif;
 		}
 
 		button{
-			@include button-border(#436355, $color-white-trans);
+			@include button-border($color-darkest-opaque, rgba(255, 255, 255, 0.8));
 			background-color: $color-darkest;
-			padding: 0.8em 3em 0.8em 3em;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			width: 100%;
+			max-width: 170px;
 		}
 	}
 

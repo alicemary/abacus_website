@@ -3,7 +3,7 @@
 	<section>
 		<div>
 			<h1>Custom Worksheet Generator</h1>
-			<p>This worksheet generator allows students to choose a specific skill to study and the level of difficulty. The different techniques are best described on the <a href="http://localhost:4567/dir/skills.html">abacus skills</a> page. </p>
+			<p>This worksheet generator allows students to choose a specific skill to study and the level of difficulty. The different techniques are best described on the <%= link_to 'abacus skills', '/dir/skills.html', :relative => true %> page.</p>
 		</div>
 	</section>
 
@@ -13,13 +13,16 @@
 				<h1>Worksheet Generator</h1>
 			</div>
 
-			<div class="pure-u-1 check">
+			<div class="pure-u-1 check" role="radiogroup" aria-labelledby="targeted technique">
 				<p>Targeted Technique:</p>
 				<div class="operations">
 					<div>
 						<label class="check-cont">Direct
-  						<input type="radio" name="radio" id="direct">
+  						
+  						<input type="radio" name="radio" id="direct" role="radio" aria-checked="false" tabindex="0">
+  						
   						<span class="checkmark"></span>
+
   						</label>
 					</div>
 

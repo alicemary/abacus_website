@@ -1,6 +1,7 @@
-/*button border
-Assigns the main background color to the button and a double border which uses the background color and a border color. It also adds a border radius*/
+/*button formatting*/
 
+
+/*Assigns the main background color to the button and a double border which uses the background color and a border color. It also adds a border radius*/
 @mixin button-border($background, $border){
 	background-color: $background;
 	border: 2px solid $border;

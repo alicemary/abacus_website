@@ -3,7 +3,15 @@ title: Progressive Abacus
 ---
 
 
-<div class="banner break">
+<!-- <div class="banner break">
+      <div class="overlay"></div>
+      <div class="background"></div>
+      <div class="tagline">
+        <h1>printable abacus<br> questions for all<br> skill levels</h1>
+      </div>
+</div> -->
+
+<div class="banner break" role="banner">
       <div class="overlay"></div>
       <div class="background"></div>
       <div class="tagline">
@@ -15,7 +23,7 @@ title: Progressive Abacus
     <section class="homepage_abacus">
         <div>
           <h2>Worksheets that Target Specific Techniques on the Abacus</h2>
-          <p>Daily practice worksheets are a great learning tool for students looking to master fundamental abacus skills. New students are encouraged to work through the leveled system learing to sum any three-digit numbers on the abacus. Need a bigger challenge? Try the <a href="http://localhost:4567/dir/custom.html">custom abacus worksheet generator</a> which targets specific movements and large numbers.</p>
+          <p>Daily practice worksheets are a great learning tool for students looking to master fundamental abacus skills. New students are encouraged to work through the leveled system learning to sum any three-digit numbers on the abacus. Need a bigger challenge? Try the <%= link_to 'Custom Worksheet Generator', '/dir/custom.html', :relative => true %> which targets specific movements and large numbers.</p>
         </div>
     </section>
 
@@ -23,47 +31,47 @@ title: Progressive Abacus
       <div class="icons">
         <div id="target">
           <h3>Targeted Skills</h3>
-          <img src="/images/targeted_skills.svg">
+          <img src="/images/targeted_skills.svg" alt="target icon">
         </div>
 
         <div id="customize">
           <h3>Custom Worksheets</h3>
-          <img src="/images/custom_worksheets.svg">
+          <img src="/images/custom_worksheets.svg" alt="custom icon">
         </div>
 
         <div id="difficulty">
           <h3>Varying Difficulty</h3>
-          <img src="/images/varying_difficulty.svg">
+          <img src="/images/varying_difficulty.svg" alt="difficulty icon">
         </div>
       </div>       
     </section>
 
     <section class="home-levels">
         <div id="home-page-level">
-          <h2>Fundamental Abacus Course</h2>
-          <p>This leveled system provides worksheets for students working toward summing any three-digit numbers on the abacus.  The course covers bead values, the small-friend concept and the borrow and carry techniques. Each level should be practiced repeatedly before moving on as these skills are fundamental to the more advanced mathematics that can be performed on the abacus. Choose from the beginner, intermediate or advanced starting points.</p>
+          <h2>Abacus Fundamentals Course</h2>
+          <p>This leveled system provides worksheets for students working toward summing any three-digit numbers on the abacus.  It covers bead values, the small-friend concept and the borrow and carry techniques. Each level should be practiced repeatedly before moving on as these skills are essential to the more advanced mathematics that can be performed on the abacus.</p>
         </div>
 
         <div class="abacus-levels">
-          <div><a href="http://localhost:4567/dir/beginner.html">
-            <button class="level-button">
+          <div><a href="http://localhost:4567/dir/beginner.html" title="beginner abacus fundamentals course">
+            <div class="level-button">
               <h4>Beginner</h4>
               <p>Get acquainted with abacus bead values and try out some basic math.</p>
-            </button></a>
+            </div></a>
           </div>
 
-          <div><a href="http://localhost:4567/dir/levels.html#intermediate">
-            <button class="level-button">
+          <div><a href="http://localhost:4567/dir/intermediate.html" title="intermediate abacus fundamentals course">
+            <div class="level-button">
               <h4>Intermediate</h4> 
-              <p>Build strong foundations with multidigit small-friend calculations.
-            </button></a>
+              <p>Build strong foundations with multi-digit small-friend calculations.
+            </div></a>
           </div>
 
-          <div><a href="http://localhost:4567/dir/levels.html#advanced">
-            <button class="level-button">
+          <div><a href="http://localhost:4567/dir/advanced.html" title="advanced abacus fundamentals course">
+            <div class="level-button">
               <h4>Advanced</h4>
-              <p>Master the big-friend concept to calculate any multidigit numbers. </p>  
-            </button></a>
+              <p>Master multi-digit numbers on the abacus with borrow and carry.</p>  
+            </div></a>
           </div>
         </div>
     </section>
@@ -73,12 +81,12 @@ title: Progressive Abacus
           <h2>Custom Worksheet Generator</h2>
           <p>Students get to choose their own challenge with the custom worksheet generator. Select the abacus technique that needs practice and the level of difficulty. Questions can have up to 20 numbers each and a maximum of 9 digits.</p>
       </div>
-
+      
       <div class="custom-button">   
           <a href="http://localhost:4567/dir/custom.html">
-          <button >
-            <h4>Customize</h4>
-          </button>
+            <div>
+            <h4>Custom Worksheet Generator</h4>
+            </div>
           </a>
       </div>
     </section>  

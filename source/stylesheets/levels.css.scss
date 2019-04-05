@@ -1,9 +1,7 @@
 @import 'variables';
 @import 'mixins';
 
-
 /*Beginner, Intermediate and Advanced pages use this formatting*/
-
 
 
 
@@ -16,60 +14,49 @@
 
 	section:first-child{
 		padding-bottom: 0;
-		/*padding-top: calc(3rem - 1rem);*/
 		h1{
 			margin-top: 0;
 		}
 	}
 	
-
-
 	section:last-child{
 		padding-top: 0;
+		margin-bottom: 1rem;
 	}
 
-	
-
 	.arrow{
-		/*margin-top: 1rem;*/
 		width: 100%;
 		height: 60px;
-		
 
 		a{
-				text-decoration: none;
-			}
-
-
-		h4{
-			/*font-family: 'Raleway Dots', cursive;*/
-			/*color: #426254;	*/
-			color: $color-darkest;
-			font-weight: 600;
-
+			text-decoration: none;
 		}
 
 		img{
-			width: 50px;
+			width: 70px;
 			margin-top: 0.5rem;
+			display: block;
 		}
 
 		div{
 			width: 50%;
 			display: inline-block;
 		}
+
 		.arrow-left{
 			float: left;
 			img{				
 				margin-left: 0;
 			}
 		}
+
 		.arrow-right{
 			text-align: right;
 
 			float: right;
 			img{
 				margin-right: 0;
+				float: right;
 			}
 		}
 	}
@@ -77,42 +64,33 @@
 	.test{
 		clear: both;
 	}
+}
 
-	
-	
+@media screen and (max-width: 35.5em){
+	.arrow{
+		h4{
+			font-size: 1em;
+		}	
+	}
 }
 
 @media screen and (min-width: 35.5em){
 	.levels{
 		.arrow{
 			height: 65px;
-			
-			img{
-				/*width: 70px;*/
-			}
 		}
 	}
 }
 
-@media screen and (min-width: 48em){
-	.levels{
-		/*section:first-child{
-			padding-bottom: 2.5rem;
-		}*/
-	}
-}
+
 
 @media screen and (min-width: 64em){
 	.levels{
 		section:nth-child(2){
 			padding-bottom: calc(4.5rem - 24px);
 		}
-		section:first-child{
-			/*padding-top: calc(4.5rem - 2rem);*/
-		}
 
 		.arrow{
-			/*margin-top: 2rem;*/
 			max-width: none;
 			height: 85px;
 
@@ -120,13 +98,8 @@
 				width: 70px;
 			}
 		}
-
-		/*section:first-child{
-			padding-bottom: 3rem;
-		}*/
 	}
 }
-
 
 
 
@@ -142,49 +115,29 @@
 	width: calc(100% - 6px);
 
 	> div{
-	width: 100%;
-	margin: auto;
+		width: 100%;
+		margin: auto;
 
-
-
-		.modal-button{
-
-			/*@include button-border($color-darkest, $color-white-trans);		*/
-			/*@include button-border(#436355, $color-white-trans);		*/
-			/*background-image: linear-gradient(to top, $color-darkest);*/
-			
-			@include button-border(#436355, $color-white-trans);
-			/*background-image: linear-gradient(to bottom, $color-darkest 65%, #436355);*/
-			background-image: linear-gradient(to bottom, $color-darkest 30%, #436355);
-			/*background-color: #436355;*/
+		.modal-button{			
+			@include button-border($color-darkest-opaque, rgba(255, 255, 255, 0.8));
+			background-image: linear-gradient(to bottom, $color-darkest 30%, $color-darkest-opaque);
 			width: 100%;
 			margin-bottom: 1.5rem;
 			padding: 1em 0 0.5em 0;
-		/*	padding-left: 0;
-			padding-right: 0;*/
-			/*height: 4.5rem;*/
 			
 			h4{
 				font-family: 'Open Sans', sans-serif;
-				/*color: $color-white-med;*/
-				/*color: $color-yellow-dark;*/
-				background: linear-gradient(to right, $color-yellow-light, $color-yellow-dark 80%);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				/*font-size: 1.1rem;*/
-				/*font-family: 'Raleway Dots', cursive;*/
+				color: $color-yellow-dark;
+				letter-spacing: 0.1em;
 			}
 
 			p{
 				font-size: 0.9rem;
-				/*color: $color-white-med;*/
 				color: rgba(255, 255, 255, 0.8);
-				/*color: #436355;*/
 				padding-bottom: 0.5em;
 				line-height: 1.4em;
 				font-weight: 300;
 			}
-
 		}
 	}
 }
@@ -192,21 +145,10 @@
 
 
 @media screen and (min-width: 35.5em){
-	
 	.levels-button{
-
 		> div{
 			width: calc((100% - 5.5vw - 18px) / 3);
 			margin: 0;
-
-			.modal-button{
-				/*width: calc(100% - 5.5vw);*/
-				
-				
-				h4{
-					/*font-size: 1rem;*/
-				}
-			}
 		}
 	}
 }
@@ -215,18 +157,8 @@
 
 @media screen and (min-width: 768px){
 	.levels-button{
-
 		> div{
-		
 			.modal-button{
-				/*font-size: 1.2em;*/
-				/*height: 5rem;*/
-				/*width: calc((100vw - 15.5vw)/3);*/
-				
-				h4{
-					/*font-size: 1.2rem;*/
-				}
-
 				p{
 					font-size: 1rem;
 				}
@@ -236,21 +168,15 @@
 }
 
 
+
 @media screen and (min-width: 64em){
 	.levels-button{	
 		width: 100%;
 		max-width: none;
 
 		> div{
-
 			.modal-button{
 				border-radius: 8px;
-				/*height: 6rem;*/
-				
-			
-				h4{
-					/*font-size: 1.4rem;*/
-				}
 
 				p{
 					font-size: 1.2rem;
@@ -260,21 +186,14 @@
 	}
 }
 
+
+
 @media screen and (min-width: 80em){
 	.levels-button{
-
 		> div{
-
 			.modal-button{
-				
-				/*height: 8rem;*/
-				/*font-size: 1.6em;*/
 				margin-bottom: 2.5rem;
 			
-				h4{
-					/*font-size: 1.8rem;*/
-				}
-
 				p{
 					font-size: 1.4rem;
 				}

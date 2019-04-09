@@ -8,3 +8,4 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 # gem 'bh', '~> 1.3'
 gem 'middleman-gh-pages'
 gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
+gem 'middleman-minify-html'

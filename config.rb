@@ -10,7 +10,7 @@ set :relative_links, true
 
 activate :directory_indexes
 activate :imageoptim
-
+activate :minify_html
 # activate :livereload
 # activate :bh
 # Layouts

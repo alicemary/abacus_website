@@ -38,7 +38,8 @@ let slider2 = document.getElementById("digitRange");
 let numberOutput = document.getElementById("numbers");
 let digitOutput = document.getElementById("digits");
 
-		
+let anchors = document.querySelectorAll("a");
+let but = document.querySelectorAll("button");	
 
 
 
@@ -59,20 +60,32 @@ function showModal(){
 // assigns tabindex -1 to tabbable elements in the content
 function disableTab(){
 	console.log("disable tab");
-	let anchors = document.querySelectorAll("a");
-	let but = document.querySelectorAll("button");
 
 	for(let a of anchors){
-		a.toggleAttribute("tabindex", "-1");
+		a.setAttribute("tabindex", "-1");
 	};
 
 	for(let b of but){
-		b.toggleAttribute("tabindex", "-1");
+		b.setAttribute("tabindex", "-1");
 	};
 
-	modalCross.setAttribute("tabindex", "1");
-	printPage.setAttribute("tabindex", "1");
+	modalCross.setAttribute("tabindex", "0");
+	printPage.setAttribute("tabindex", "0");
 	
+}
+
+
+
+// make buttons and links tabbable
+function addTab(){
+	console.log("add tab");
+	for(let a of anchors){
+		a.setAttribute("tabindex", "0");
+	};
+
+	for(let b of but){
+		b.setAttribute("tabindex", "0");
+	};
 }
 
 
@@ -80,11 +93,8 @@ function disableTab(){
 // Each button on the page has an event listener which displays the modal when triggered
 button.forEach((item) => {
 	item.addEventListener("click", showModal, false);
-	// item.addEventListener("keypress", showModal, false);
-
 	item.addEventListener("click", disableTab, false);
-	modalCross.addEventListener("click", disableTab, false);
-
+	modalCross.addEventListener("click", addTab, false);
 });
 
 
@@ -111,10 +121,9 @@ function closeModal(){
 }
 
 
-if (page.classList.value == "levels" || page.classList.value == "cutom" ){
+if (page.classList.value == "course" || page.classList.value == "cutom" ){
 // The cross inside the modal has an event listener that hides and clears the modal
 modalCross.addEventListener("click", closeModal, false);
-modalCross.addEventListener("keypress", closeModal, false);
 };
 
 
@@ -579,9 +588,9 @@ let questionsPerSheet = function(numbersPerQuestion, digitsPerNumber){
 
 
 
-// Levels
-// This manages the buttons on levels pages (beginner, intermediate and advanced).
-if (page.classList.value == "levels"){
+// courses
+// This manages the buttons on course pages (beginner, intermediate and advanced).
+if (page.classList.value == "course"){
 
 	if (page.id == "beginner-page"){
 		// There are six buttons, each is assigned a question length, number of digits,
@@ -615,7 +624,6 @@ if (page.classList.value == "levels"){
 			+ ' numbers with ' + upTo + digits[level] + ' ' + plural + ' each.';
 		
 			beginner[level].addEventListener("click", function(){addTable( buildTable(lengths[level], digits[level], questions[level], functions[level], maxValues[level]), title, info)}, false);
-			beginner[level].addEventListener("keypress", function(){addTable( buildTable(lengths[level], digits[level], questions[level], functions[level], maxValues[level]), title, info)}, false);
 		};
 
 
@@ -650,7 +658,6 @@ if (page.classList.value == "levels"){
 			+ ' numbers with ' + upTo + digits[level] + plural + ' each.';
 
 			intermediate[level].addEventListener("click", function(){addTable( buildTable(lengths[level], digits[level], questions[level], randomPullBreak, 9), title, info)}, false);
-			intermediate[level].addEventListener("keypress", function(){addTable( buildTable(lengths[level], digits[level], questions[level], randomPullBreak, 9), title, info)}, false);
 		};
 
 
@@ -679,7 +686,6 @@ if (page.classList.value == "levels"){
 			+ ' numbers with at most ' + digits[level] + ' digits each.';
 
 			advanced[level].addEventListener("click", function(){addTable( buildTable(lengths[level], digits[level], questions[level], randomCarryBorrow, 9), title, info)}, false);
-			advanced[level].addEventListener("keypress", function(){addTable( buildTable(lengths[level], digits[level], questions[level], randomCarryBorrow, 9), title, info)}, false);
 		};
 	};
 
@@ -688,7 +694,6 @@ if (page.classList.value == "levels"){
 	// open print window
 	// The print button in the modal opens the print window
 	printPage.addEventListener("click",	function(){window.print()}, false);
-	printPage.addEventListener("keypress",	function(){window.print()}, false);
 };
 
 
@@ -771,17 +776,11 @@ if (page.classList.value == "custom"){
 		printPage = document.querySelector("#print");
 	}, false);
 
-	button[0].addEventListener("keypress", function(){
-		addTable(customButton(slider.value, slider2.value, DIRECT.checked, PULLBREAK.checked, CARRYBORROW.checked), title, info(), slider2.value);
-		printPage = document.querySelector("#print");
-	}, false);
-
 
 
 	// open print window
 	// The print button in the modal opens the print window
 	printPage.addEventListener("click",	function(){window.print()}, false);
-	printPage.addEventListener("keypress",	function(){window.print()}, false);
 };
 
 

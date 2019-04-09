@@ -5,13 +5,20 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-    
+
+
+    <!-- page title and meta description -->
+    <title><%= current_page.data.title || "Progressive Abacus Worksheets" %></title>
+
+    <meta content="<%= current_page.data.description || 'Printable abacus worksheets for all skill levels. Choose the difficulty with the custom worksheet generator or go stepwise with the abacus fundamentals course.' %>" name="description" />
+
+    <!--pure-css framework and reset-->
     <%= stylesheet_link_tag "base-min" %>
     <%= stylesheet_link_tag "pure-min" %>
     <%= stylesheet_link_tag "grids-responsive-min" %>
 
+
+     <!--custom stylesheets-->
     <%= stylesheet_link_tag "stylesheet" %>
     <%= stylesheet_link_tag "modal" %>
     <%= stylesheet_link_tag "levels" %>
@@ -21,14 +28,10 @@
     <%= stylesheet_link_tag "footer" %>
     <%= stylesheet_link_tag "homepage" %>
     
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Poiret+One|Pontano+Sans|Rajdhani|Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway+Dots|Raleway:500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Bree+Serif|Caveat+Brush|Courgette|Dekko|Holtwood+One+SC|IM+Fell+English+SC|Just+Another+Hand|Marck+Script|Pangolin|Patrick+Hand|Rozha+One|Suez+One|Ultra|Walter+Turncoat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300i,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,500|Trirong:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
 
 
     

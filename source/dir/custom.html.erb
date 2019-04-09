@@ -1,3 +1,9 @@
+---
+title: Custom Abacus Worksheet Generator
+
+description: Custom worksheet generator for printable abacus questions of all skill levels. Choose the specific technique to target and the degree of difficulty.
+---
+
 
 <content class="custom">
 	<section>
@@ -8,16 +14,16 @@
 	</section>
 
 	<section>
-		<form class="pure-g form">
+		<div class="pure-g form">
 			<div class="pure-u-1">
 				<h1>Worksheet Generator</h1>
 			</div>
 
-			<div class="pure-u-1 check" role="radiogroup" aria-labelledby="targeted technique">
+			<!-- <div class="pure-u-1 check" role="radiogroup" aria-labelledby="targeted technique">
 				<p>Targeted Technique:</p>
 				<div class="operations">
 					<div>
-						<label class="check-cont">Direct
+						<label class="check-cont" tabindex="0">Direct
   						
   						<input type="radio" name="radio" id="direct" role="radio" aria-checked="false" tabindex="0">
   						
@@ -40,24 +46,52 @@
   						</label>
 					</div>				
 				</div>
-			</div>
+			</div> -->
+			<div class="pure-u-1 check" role="radiogroup" aria-labelledby="targeted technique">
+				<p>Targeted Technique:</p>
+				<div class="operations">
+					<div>
+						<label class="check-cont">Direct
+  						
+  						<input type="radio" name="radio" id="direct" role="radio" aria-checked="false" tabindex="0">
+  						
+  						<span class="checkmark"></span>
+
+  						</label>
+					</div>
+
+					<div>
+						<label class="check-cont">Pull-5 / Break-5
+  							<input type="radio" name="radio" id="pull-break" tabindex="0">
+  							<span class="checkmark"></span>
+  						</label>
+					</div>
+					
+					<div>
+						<label class="check-cont">Borrow / Carry
+  							<input type="radio" checked="checked" name="radio" id="carry-borrow" tabindex="0">
+  							<span class="checkmark"></span>
+  						</label>
+					</div>				
+				</div>
+		</div>
 
 			<div class="pure-u-1 slidecontainer">
 				<p>Numbers Per Question: &nbsp<span id="numbers" class="num"></span></p>
-  				<input type="range" min="2" max="20" value="7" class="slider" id="numberRange">
+  				<input type="range" min="2" max="20" value="7" class="slider" id="numberRange" tabindex="0">
 			</div>
 
 			<div class="pure-u-1 slidecontainer">
 				<p>Digits Per Number: &nbsp<span id="digits" class="num"></span></p>
-  				<input type="range" min="1" max="9" value="3" class="slider" id="digitRange">
+  				<input type="range" min="1" max="9" value="3" class="slider" id="digitRange" tabindex="0">
 			</div>
 			
 			<div class="pure-u-1 generate-button press-button">
-				<button type="button" class="pure-button">
+				<button type="button">
 					<h4>Submit</h4>
 				</button>
 			</div>
-		</form>
+		</div>
 	</section>
 </content>
 <%= partial 'partials/modal' %>

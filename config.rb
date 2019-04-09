@@ -9,6 +9,8 @@ activate :relative_assets
 set :relative_links, true
 
 activate :directory_indexes
+activate :imageoptim
+
 # activate :livereload
 # activate :bh
 # Layouts

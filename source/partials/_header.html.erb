@@ -3,10 +3,11 @@
   <nav class="menu" role="navigation">    
       <ul class="menu-margin" >
         <li >
-          <a href="/" class="link" tabindex="2">home</a>
+          <!-- <a href="/" class="link" tabindex="2">home</a> -->
+          <%= link_to 'home', '/', :relative => true, :class => 'link'%>
         </li>
         <li >
-          <%= link_to 'questions', '/dir/abacus.html', :relative => true, :class => 'link'%>
+          <%= link_to 'questions', '/questions', :relative => true, :class => 'link'%>
         </li>
         <li >
           <%= link_to 'skills', '/dir/skills.html', :relative => true, :class => 'link' %>

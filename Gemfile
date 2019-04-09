@@ -9,3 +9,4 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'middleman-gh-pages'
 gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
 gem 'middleman-minify-html'
+gem "middleman-favicon-maker", "~> 4.1"

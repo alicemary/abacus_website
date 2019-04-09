@@ -11,6 +11,17 @@ set :relative_links, true
 activate :directory_indexes
 activate :imageoptim
 activate :minify_html
+
+configure :build do
+  activate :favicon_maker, :icons => {
+    "_favicon_template.svg" => [
+      { icon: "apple-touch-icon-152x152-precomposed.svg" },
+      { icon: "apple-touch-icon-114x114-precomposed.svg" },
+      { icon: "apple-touch-icon-72x72-precomposed.svg" },
+    ]
+  }
+end
+
 # activate :livereload
 # activate :bh
 # Layouts

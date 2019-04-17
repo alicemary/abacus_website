@@ -34,7 +34,6 @@
       font-size: 2.2em;
       font-family: 'Rubik', sans-serif;
       text-transform: capitalize;
-      text-shadow: 1px 1px 1px #000;
       line-height: 1.4em; }
 
 @media (min-width: 568px) {
@@ -47,8 +46,8 @@
   .banner {
     height: 420px; }
     .banner .tagline {
-      bottom: 10%;
-      left: 10%; } }
+      bottom: 16%;
+      left: 16%; } }
 @media (min-width: 64em) {
   .banner {
     height: 584px; }

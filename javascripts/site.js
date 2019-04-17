@@ -59,7 +59,6 @@ function showModal(){
 
 // assigns tabindex -1 to tabbable elements in the content
 function disableTab(){
-	console.log("disable tab");
 
 	for(let a of anchors){
 		a.setAttribute("tabindex", "-1");
@@ -121,7 +120,7 @@ function closeModal(){
 }
 
 
-if (page.classList.value == "course" || page.classList.value == "cutom" ){
+if (page.classList.value == "course" || page.classList.value == "custom" ){
 // The cross inside the modal has an event listener that hides and clears the modal
 modalCross.addEventListener("click", closeModal, false);
 };

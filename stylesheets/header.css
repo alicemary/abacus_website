@@ -79,7 +79,7 @@ header {
           -ms-flex-positive: 1;
               flex-grow: 1; }
       .menu .menu-margin > li a {
-        padding-top: 0.7rem; }
+        padding-top: 0.6rem; }
     .menu .menu-margin > li:last-child {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
@@ -109,8 +109,17 @@ header {
     font-weight: 500; }
 
 @media screen and (min-width: 35.5em) {
-  .menu a {
-    font-size: 1em; } }
+  .menu {
+    		/*.menu-margin{
+    			> li{
+    
+    				a{
+    					padding-top: 0.5;
+    				}
+    			}
+    		}*/ }
+    .menu a {
+      font-size: 1em; } }
 @media (min-width: 768px) {
   .menu {
     /*When the viewport is large, the hide class makes each menu item visible*/ }

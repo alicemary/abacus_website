@@ -167,11 +167,6 @@ The interior of the hamburger is transparent.*/
     transition: transform .25s ease-in-out;
     transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
 
-.hamburger:hover {
-  color: #133c2a; }
-  .hamburger:hover:before, .hamburger:hover:after {
-    color: #133c2a; }
-
 /*"before" and "after" transform into a cross when the hamburger is clicked*/
 .active {
   border-color: transparent; }

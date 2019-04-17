@@ -21,20 +21,20 @@
     z-index: 1; }
   .banner .overlay {
     background-image: url("../images/overlay.svg");
-    background-size: 3px;
+    background-size: 1px;
     z-index: 2; }
   .banner .tagline {
     z-index: 3;
     height: auto;
     top: initial;
     left: 5.5%;
-    bottom: 5.5%; }
+    bottom: 11%; }
     .banner .tagline h1 {
       color: rgba(255, 255, 255, 0.9);
       font-size: 2.2em;
-      font-family: 'Bree Serif', serif;
+      font-family: 'Rubik', sans-serif;
       text-transform: capitalize;
-      text-shadow: 2px 2px 2px #133c2a;
+      text-shadow: 1px 1px 1px #000;
       line-height: 1.4em; }
 
 @media (min-width: 568px) {
@@ -44,12 +44,14 @@
   .banner .tagline h1 {
     font-size: 2.2em; } }
 @media (min-width: 768px) {
-  .banner .tagline {
-    bottom: 18%;
-    left: 10%; } }
+  .banner {
+    height: 420px; }
+    .banner .tagline {
+      bottom: 10%;
+      left: 10%; } }
 @media (min-width: 64em) {
   .banner {
-    height: 553px; }
+    height: 584px; }
     .banner .tagline h1 {
       font-size: 2.6em; } }
 /*button formatting*/

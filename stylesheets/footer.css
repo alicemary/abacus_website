@@ -1,0 +1,45 @@
+/*Greens*/
+/*Yellows*/
+/*Whites*/
+/*greys*/
+/*blues*/
+/*footer*/
+footer {
+  background-color: #133c2a; }
+  footer div {
+    width: 100%;
+    height: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  footer p {
+    color: rgba(255, 255, 255, 0.6); }
+  footer a {
+    color: #c1a07a; }
+  footer div:first-child {
+    height: 6px;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(#c1a07a), color-stop(#f5e2ba), color-stop(#edce8c), to(#93785f));
+    background: linear-gradient(to right, #c1a07a, #f5e2ba, #edce8c, #93785f); }
+
+@media screen and (min-width: 35.5em) {
+  footer div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    footer div p {
+      padding-left: 5.5vw; } }
+@media screen and (min-width: 64em) {
+  footer p {
+    padding-left: 10vw; } }
+@media screen and (min-width: 80em) {
+  footer div {
+    height: 4.5rem; }
+  footer div:first-child {
+    height: 7px; } }

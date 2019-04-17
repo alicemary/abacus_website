@@ -1,0 +1,231 @@
+/*Greens*/
+/*Yellows*/
+/*Whites*/
+/*greys*/
+/*blues*/
+/*header*/
+/*general header formatting*/
+header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: #133c2a; }
+  header a {
+    text-decoration: none; }
+
+/*logo and title*/
+.title {
+  width: 100%;
+  padding: 1rem 5.5% 1rem 5.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  .title div {
+    display: inline-block; }
+  .title img {
+    height: 60px;
+    margin-top: 0.2rem; }
+  .title h1 {
+    background: linear-gradient(30deg, #f5e2ba 33%, #edce8c, #f5e2ba 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+    margin: 0 0 0 1rem;
+    font-weight: 300; }
+  .title span {
+    font-weight: 600; }
+
+@media (min-width: 35.5em) {
+  .title {
+    height: 105px; } }
+@media (min-width: 768px) {
+  .title {
+    padding-left: 5.5%; } }
+@media screen and (min-width: 64em) {
+  .title {
+    height: 135px; }
+    .title h1 {
+      font-size: 2.2em;
+      margin: 0 0 0 2rem; }
+    .title img {
+      height: 82px; } }
+/*main menu*/
+.menu {
+  height: 30px;
+  padding: 0 5.5% 0 5.5%;
+  background-color: rgba(255, 255, 255, 0.2);
+  /*	when javascript is loaded, the "hide" class is added to every menu item
+  	so the main menu collapses when the screen is small.*/ }
+  .menu .menu-margin {
+    width: 100%;
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+    /*Targets the menu item (including the dropdown menu item) to
+    highlight which item is hovered over or tabbed over.*/ }
+    .menu .menu-margin > li {
+      display: inline-block;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+    .menu .menu-margin > li:last-child {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+    .menu .menu-margin > li:hover:not(:last-child),
+    .menu .menu-margin > li:focus-within:not(:last-child) {
+      background-color: #133c2a; }
+  .menu a {
+    color: #fff;
+    font-size: 0.8em; }
+  .menu button {
+    background-color: transparent;
+    border: 0; }
+  .menu .link {
+    opacity: 1;
+    padding-top: 0.5em;
+    padding-bottom: 0.3em;
+    height: 100%;
+    text-align: center;
+    width: 100%; }
+  .menu .hide {
+    visibility: hidden;
+    opacity: 0; }
+  .menu .highlight {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #133c2a;
+    font-weight: 500; }
+
+@media screen and (min-width: 35.5em) {
+  .menu {
+    height: 37px; }
+    .menu a {
+      font-size: 1em; } }
+@media (min-width: 768px) {
+  .menu {
+    /*When the viewport is large, the hide class makes each menu item visible*/ }
+    .menu .menu-margin {
+      max-width: 400px; }
+    .menu .link, .menu .hide {
+      visibility: visible;
+      opacity: 1; } }
+@media screen and (min-width: 64em) {
+  .menu {
+    height: 47px; }
+    .menu .menu-margin {
+      max-width: 500px; }
+    .menu a {
+      font-size: 1.2em; } }
+@media screen and (min-width: 80em) {
+  .menu .menu-margin {
+    max-width: 700px; } }
+/*hamburger menu*/
+/*the top and bottom border make up the top and bottom bars of the hamburger menu.
+The interior of the hamburger is transparent.*/
+.hamburger {
+  width: 20px;
+  height: 16px;
+  float: right;
+  background: transparent;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  -webkit-transition: all .05s ease-in-out;
+  transition: all .05s ease-in-out;
+  color: #fff;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-top: auto;
+  /*The centre line of the hamburger is made up of overlaping "before" and "after" elements.*/ }
+  .hamburger:before, .hamburger:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    background: currentColor;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+    transition: -webkit-transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
+
+.hamburger:hover {
+  color: #133c2a; }
+  .hamburger:hover:before, .hamburger:hover:after {
+    color: #133c2a; }
+
+/*"before" and "after" transform into a cross when the hamburger is clicked*/
+.active {
+  border-color: transparent; }
+  .active:before {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg); }
+  .active:after {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg); }
+
+@media screen and (min-width: 768px) {
+  /*The hamburger menu is hidden when the viewport is large*/
+  .menu-margin li:last-child {
+    display: none; } }
+/*dropdown menu*/
+#levels {
+  position: relative; }
+  #levels ul {
+    position: absolute;
+    top: 30px;
+    height: 40px;
+    width: 91px;
+    visibility: hidden;
+    opacity: 0;
+    /*This targets hovered items when inside the dropdown menu.
+    It also works when tabbing through the menu. */ }
+    #levels ul li {
+      display: block;
+      background-color: #436355;
+      padding-left: 0.5rem;
+      height: 30px;
+      padding-top: 0.3em; }
+    #levels ul li:hover,
+    #levels ul li:focus-within {
+      background-color: #133c2a; }
+
+/*This targets the entire dropdown menu making it visible when
+hovered over or when tabbing through.*/
+#levels:hover ul,
+#levels:focus-within ul {
+  visibility: visible;
+  opacity: 1; }
+
+@media screen and (min-width: 568px) {
+  #levels ul {
+    width: 110px;
+    top: 37px; }
+    #levels ul li {
+      height: 35px;
+      padding-top: 0.5em; } }
+@media screen and (min-width: 64em) {
+  #levels ul {
+    top: 47px;
+    width: 131px; }
+    #levels ul li {
+      height: 45px;
+      padding-top: 0.7em; } }

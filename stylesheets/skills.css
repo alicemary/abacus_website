@@ -1,0 +1,20 @@
+/*skills*/
+.skills .read-abacus img {
+  width: 65%;
+  max-width: 250px; }
+.skills img {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1.4rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+.skills .num {
+  font-family: 'Open Sans', sans-serif; }
+
+@media screen and (min-width: 64em) {
+  .skills .read-abacus img {
+    margin-left: 0; }
+  .skills img {
+    margin-top: 2.25rem;
+    margin-left: 0; } }

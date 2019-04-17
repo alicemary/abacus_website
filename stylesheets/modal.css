@@ -1,0 +1,193 @@
+/*Greens*/
+/*Yellows*/
+/*Whites*/
+/*greys*/
+/*blues*/
+/*button formatting*/
+/*Assigns the main background color to the button and a double border which uses the background color and a border color. It also adds a border radius*/
+/* Modal layout */
+.modal {
+  z-index: 3;
+  display: none;
+  padding-top: 44px;
+  padding-bottom: 48px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .modal .modal-content {
+    margin: auto;
+    background-color: #fff;
+    width: calc(100% - 11%);
+    border-radius: 6px; }
+    .modal .modal-content .intro {
+      width: 100%; }
+      .modal .modal-content .intro section {
+        padding-left: 5.5vw;
+        padding-right: 5.5vw; }
+    .modal .modal-content .print-container {
+      width: 100%;
+      text-align: center; }
+      .modal .modal-content .print-container button {
+        background-color: #436355;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        -webkit-box-shadow: 0 0 0 3px #436355;
+                box-shadow: 0 0 0 3px #436355;
+        border-radius: 8px;
+        background-color: #133c2a;
+        margin-bottom: 3rem;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        width: 100%;
+        max-width: 160px; }
+        .modal .modal-content .print-container button h4 {
+          font-family: 'Open Sans', sans-serif;
+          color: rgba(255, 255, 255, 0.8); }
+  .modal .modal-x {
+    position: absolute;
+    top: 59px;
+    right: 11vw;
+    font-size: 2.5em;
+    border: none; }
+  .modal .modal-x:hover {
+    cursor: pointer; }
+
+@media screen and (min-width: 64em) {
+  .modal {
+    padding-top: 53px; }
+    .modal .modal-content .print-container button {
+      margin-bottom: 4.5rem; } }
+/* Table */
+.exterior-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'B612 Mono', monospace;
+  width: 95%;
+  margin-left: 0; }
+  .exterior-table table, .exterior-table td, .exterior-table th {
+    border-collapse: collapse; }
+  .exterior-table table {
+    margin-bottom: 3rem;
+    width: 20%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    font-size: 0.8em; }
+  .exterior-table .big-table {
+    width: 100%;
+    font-size: 1em; }
+    .exterior-table .big-table th,
+    .exterior-table .big-table td {
+      padding-right: 35%; }
+  .exterior-table td {
+    text-align: right;
+    padding-right: 10%; }
+  .exterior-table th {
+    color: #133c2a;
+    text-align: right;
+    padding-right: 10%; }
+  .exterior-table td span {
+    border-bottom: 1px solid black; }
+
+@media screen and (min-width: 35.5em) {
+  .exterior-table .big-table {
+    width: 20%;
+    font-size: 0.8em; }
+    .exterior-table .big-table th,
+    .exterior-table .big-table td {
+      padding-right: 0%; } }
+@media screen and (min-width: 48em) {
+  .exterior-table {
+    width: 93%; }
+    .exterior-table table,
+    .exterior-table .big-table {
+      width: 20%;
+      font-size: 1em; } }
+@media screen and (min-width: 64em) {
+  .exterior-table {
+    width: 97%; }
+    .exterior-table table {
+      width: 10%;
+      margin-bottom: 4.5rem; }
+
+  .big-exterior {
+    width: 90%; } }
+@media screen and (min-width: 80em) {
+  .exterior-table table {
+    width: 10%; }
+  .exterior-table .big-table {
+    width: 20%; } }
+/* Print */
+@media print {
+  header,
+  .custom-banner,
+  content,
+  footer {
+    display: none; }
+
+  #print {
+    display: none; }
+
+  .modal {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: static; }
+    .modal .modal-content {
+      width: 100%;
+      border-radius: 0;
+      max-width: initial; }
+      .modal .modal-content .intro section {
+        padding-left: 13mm;
+        padding-top: 0;
+        padding-bottom: 15pt; }
+      .modal .modal-content table,
+      .modal .modal-content .big-table {
+        margin-left: 15pt;
+        margin-bottom: 45pt;
+        width: 60pt;
+        font-size: 14pt;
+        page-break-inside: avoid; }
+      .modal .modal-content .big-table {
+        width: 120pt; }
+        .modal .modal-content .big-table td,
+        .modal .modal-content .big-table th {
+          padding-right: 20%; }
+      .modal .modal-content table td,
+      .modal .modal-content table th {
+        padding-right: 10%; }
+      .modal .modal-content p {
+        font-size: 16pt; }
+      .modal .modal-content aside {
+        width: 100%; }
+      .modal .modal-content aside div {
+        height: 36px; }
+    .modal .modal-x {
+      display: none; }
+
+  .exterior-table {
+    margin-top: 5pt;
+    width: 100%;
+    padding-right: 20px; }
+
+  .exterior-table:last-child {
+    margin-top: 0;
+    padding-bottom: 0; }
+
+  .break {
+    page-break-after: always; }
+
+  .break-before {
+    page-break-before: always; } }
+@page {
+  size: landscape;
+  margin-left: 0;
+  margin-right: 5mm; }

@@ -1,0 +1,161 @@
+/*Greens*/
+/*Yellows*/
+/*Whites*/
+/*greys*/
+/*blues*/
+/*button formatting*/
+/*Assigns the main background color to the button and a double border which uses the background color and a border color. It also adds a border radius*/
+/*Custom Worksheet Generator*/
+.custom > section:first-child {
+  padding-bottom: 0; }
+
+.custom section:last-child {
+  padding-right: 0;
+  padding-left: 0; }
+
+.form {
+  background-image: url("../images/generator_background.png");
+  padding: 3rem 5.5vw 3rem 5.5vw;
+  position: relative; }
+  .form > div:not(:last-child) {
+    margin-bottom: 2.5rem; }
+  .form h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0; }
+  .form p {
+    font-weight: 600;
+    margin-top: 0;
+    font-family: 'Raleway', sans-serif; }
+  .form p:not(:last-child) {
+    padding-bottom: 0.8em; }
+  .form .num {
+    font-family: 'B612 Mono', monospace;
+    font-size: 1.2em;
+    font-weight: lighter; }
+  .form .slidecontainer {
+    margin: auto;
+    max-width: 706px; }
+    .form .slidecontainer .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 1em;
+      background-color: #fff;
+      outline: none;
+      -webkit-transition: .2s; }
+    .form .slidecontainer .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 1em;
+      height: 1em;
+      background: rgba(19, 60, 42, 0.9);
+      cursor: pointer; }
+    .form .slidecontainer .slider::-moz-range-thumb {
+      width: 1em;
+      height: 1em;
+      background: white;
+      cursor: pointer; }
+  .form .check {
+    max-width: 706px;
+    margin: auto; }
+    .form .check .check-cont {
+      display: block;
+      position: relative;
+      padding-left: 40px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .form .check .check-cont input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0; }
+      .form .check .check-cont .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none; }
+      .form .check .check-cont input:checked ~ .checkmark:after {
+        display: block; }
+      .form .check .check-cont .checkmark:after {
+        left: 5px;
+        top: 1px;
+        width: 7px;
+        height: 12px;
+        border: solid rgba(19, 60, 42, 0.9);
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .form .check .check-cont .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background-color: #fff;
+        margin-top: 3px; }
+  .form .generate-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .form .generate-button h4 {
+      color: rgba(255, 255, 255, 0.8);
+      font-family: 'Open Sans', sans-serif; }
+    .form .generate-button button {
+      background-color: #436355;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      -webkit-box-shadow: 0 0 0 3px #436355;
+              box-shadow: 0 0 0 3px #436355;
+      border-radius: 8px;
+      background-color: #133c2a;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      width: 100%;
+      max-width: 170px; }
+  .form .operations div {
+    width: 60%; }
+    .form .operations div label {
+      color: #133c2a; }
+    .form .operations div label span {
+      font-family: 'B612 Mono', monospace; }
+  .form .operations div:not(:last-child) {
+    margin-bottom: 1em; }
+
+@media screen and (min-width: 35.5em) {
+  .form .generate-button h4 {
+    font-size: 1.2em; }
+  .form .operations div {
+    margin-left: 0; } }
+@media screen and (min-width: 48em) {
+  .form .generate-button h4 {
+    font-size: 1.3em; }
+
+  .custom section:last-child {
+    padding-left: 10%;
+    padding-right: 10%; } }
+@media screen and (min-width: 64em) {
+  .form {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem; }
+    .form .generate-button h4 {
+      font-size: 1.4em; }
+    .form .operations {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .form .operations div {
+        width: calc(100% / 4);
+        margin-left: auto; }
+      .form .operations div:not(:last-child) {
+        margin-bottom: 0; } }
+@media screen and (min-width: 80em) {
+  .form .generate-button h4 {
+    font-size: 1.75em; } }

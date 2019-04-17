@@ -21,7 +21,7 @@
     z-index: 1; }
   .banner .overlay {
     background-image: url("../images/overlay.svg");
-    background-size: 1px;
+    background-size: 2px;
     z-index: 2; }
   .banner .tagline {
     z-index: 3;

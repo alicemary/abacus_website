@@ -1,4 +1,5 @@
 /*Greens*/
+/*$color-darkest-trans: rgba(19, 60, 42, 0.9);*/
 /*Yellows*/
 /*Whites*/
 /*greys*/
@@ -6,7 +7,7 @@
 /*header*/
 /*general header formatting*/
 header {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.6);
   background-color: #133c2a; }
   header a {
     text-decoration: none; }

@@ -1,4 +1,5 @@
 /*Greens*/
+/*$color-darkest-trans: rgba(19, 60, 42, 0.9);*/
 /*Yellows*/
 /*Whites*/
 /*greys*/
@@ -12,12 +13,14 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    padding-right: 5.5vw;
+    padding-left: 5.5vw; }
   footer p {
     color: rgba(255, 255, 255, 0.6); }
   footer a {
@@ -30,16 +33,17 @@ footer {
 
 @media screen and (min-width: 35.5em) {
   footer div {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-    footer div p {
-      padding-left: 5.5vw; } }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
 @media screen and (min-width: 64em) {
-  footer p {
-    padding-left: 10vw; } }
+  footer div {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; } }
 @media screen and (min-width: 80em) {
   footer div {
-    height: 4.5rem; }
+    height: 4.5rem;
+    padding-right: 10vw; }
   footer div:first-child {
     height: 7px; } }

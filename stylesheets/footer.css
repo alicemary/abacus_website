@@ -40,10 +40,10 @@ footer {
   footer div {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end; } }
+            justify-content: flex-end;
+    padding-right: 10vw; } }
 @media screen and (min-width: 80em) {
   footer div {
-    height: 4.5rem;
-    padding-right: 10vw; }
+    height: 4.5rem; }
   footer div:first-child {
     height: 7px; } }

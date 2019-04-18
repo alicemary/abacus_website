@@ -124,7 +124,8 @@ header {
       opacity: 1; } }
 @media screen and (min-width: 64em) {
   .menu {
-    height: 47px; }
+    height: 47px;
+    padding: 0 10% 0 10%; }
     .menu .menu-margin {
       max-width: 500px; }
     .menu a {

@@ -12,9 +12,26 @@
 .skills .num {
   font-family: 'Open Sans', sans-serif; }
 
+@media screen and (min-width: 48em) {
+  .skills section {
+    padding-top: 4rem; } }
 @media screen and (min-width: 64em) {
-  .skills .read-abacus img {
-    margin-left: 0; }
+  .skills .columns {
+    max-width: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .skills .columns div {
+      width: 50%;
+      max-width: 520px; }
   .skills img {
     margin-top: 2.25rem;
-    margin-left: 0; } }
+    max-width: 320px; } }
+@media screen and (min-width: 80em) {
+  .skills .columns {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; } }

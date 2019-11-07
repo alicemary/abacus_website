@@ -118,7 +118,7 @@ header {
   .menu {
     /*When the viewport is large, the hide class makes each menu item visible*/ }
     .menu .menu-margin {
-      max-width: 400px; }
+      max-width: 600px; }
     .menu .link, .menu .hide {
       visibility: visible;
       opacity: 1; } }

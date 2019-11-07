@@ -58,7 +58,20 @@
 /*Assigns the main background color to the button and a double border which uses the background color and a border color. It also adds a border radius*/
 /*homepage*/
 .homepage_abacus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-bottom: 4rem; }
+  .homepage_abacus div:last-child {
+    margin-top: 3rem;
+    background-image: url("../images/girl.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 300px; }
 
 /*feature icons*/
 .features {
@@ -131,6 +144,15 @@
     .features h3 {
       font-size: 1.2em; } }
 @media screen and (min-width: 80em) {
+  .homepage_abacus {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .homepage_abacus div:last-child {
+      margin-top: 0;
+      margin-left: 60px; }
+
   .features .icons img {
     width: 180px; } }
 /*levels*/
@@ -175,7 +197,15 @@
     border-radius: 8px;
     padding: 1em 2em 1em 2em;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
+    .home-levels .level-button img {
+      height: 70px;
+      position: absolute;
+      top: -26px;
+      left: -20px;
+      background-color: #436355;
+      border-radius: 50%; }
   .home-levels .level-button:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(0, 0, 0, 0.2)));
     background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)); }
@@ -213,43 +243,58 @@
 /*Custom Worksheet Generator*/
 .homepage-custom {
   padding-top: 3.5rem;
-  padding-bottom: 3.5rem; }
+  padding-bottom: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   .homepage-custom .custom-button a {
     text-decoration: none; }
   .homepage-custom .custom-button div {
-    background-color: #436355;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    -webkit-box-shadow: 0 0 0 3px #436355;
-            box-shadow: 0 0 0 3px #436355;
+    background-color: #133c2a;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow: 0 0 0 3px #133c2a;
+            box-shadow: 0 0 0 3px #133c2a;
     border-radius: 8px;
-    background-color: #436355;
+    background-color: #133c2a;
     width: 100%;
     text-align: center;
     margin: auto;
     position: relative;
-    padding: 1em 2em 1em 2em; }
+    padding: 1em 2em 1em 2em;
+    display: relative;
+    margin-bottom: 3rem; }
   .homepage-custom .custom-button h2 {
     font-family: 'Open Sans', sans-serif;
-    color: #fff; }
+    color: #f5e2ba; }
   .homepage-custom .custom-button p {
     margin-top: 0.8em;
     font-size: 0.9em;
     line-height: 1.4em;
     padding-bottom: 0.5em;
     color: rgba(255, 255, 255, 0.8); }
+  .homepage-custom > div:last-child img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px; }
 
 @media screen and (min-width: 568px) {
+  .homepage-custom .custom-button div {
+    max-width: 400px; }
   .homepage-custom h3 {
     font-size: 1.8em; } }
 @media screen and (min-width: 64em) {
   .homepage-custom .custom-button {
-    margin: auto;
-    max-width: 600px; } }
+    margin-left: 0; } }
 @media screen and (min-width: 80em) {
   .homepage-custom {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }

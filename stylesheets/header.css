@@ -27,7 +27,7 @@ header {
   .title img {
     height: 60px;
     margin-top: 0.2rem; }
-  .title h1 {
+  .title .logo {
     background: linear-gradient(30deg, #f5e2ba 33%, #edce8c, #f5e2ba 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

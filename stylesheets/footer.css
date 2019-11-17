@@ -25,6 +25,10 @@ footer {
     color: rgba(255, 255, 255, 0.6); }
   footer a {
     color: #fff; }
+  footer img {
+    height: 1.5rem;
+    margin-left: 0.75rem;
+    margin-top: 0.4rem; }
   footer div:first-child {
     height: 6px;
     width: 100%;
